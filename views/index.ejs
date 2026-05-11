@@ -36,19 +36,22 @@
   >
     <div class="progress-bar" aria-hidden="true"></div>
     <nav class="deck-nav" aria-label="Điều hướng slide">
-      <a href="#hero">01</a>
-      <a href="#summary">02</a>
-      <a href="#radar">03</a>
-      <a href="#funnel">04</a>
-      <a href="#phase-awaken">05</a>
-      <a href="#phase-thunder">06</a>
-      <a href="#phase-glint">07</a>
-      <a href="#audience">08</a>
-      <a href="#bigidea">09</a>
-      <a href="#content">10</a>
-      <a href="#kpi">11</a>
-      <a href="#timeline">12</a>
-      <a href="#closing">13</a>
+      <a href="#hero" title="Trang bìa">01</a>
+      <a href="#summary" title="Executive summary">02</a>
+      <a href="#radar" title="Market overview · PESTEL">03</a>
+      <a href="#brand" title="Brand analysis">04</a>
+      <a href="#competitor" title="Competitive benchmarking">05</a>
+      <a href="#audience" title="Phân đoạn &amp; lập luận Nhóm 1">06</a>
+      <a href="#persona" title="Persona">07</a>
+      <a href="#threec" title="3C &amp; Consumer insight">08</a>
+      <a href="#objectives" title="Objectives">09</a>
+      <a href="#bigidea" title="Creative platform — Big idea">10</a>
+      <a href="#keymessage" title="Key message">11</a>
+      <a href="#funnel" title="IMC plan">12</a>
+      <a href="#phase-awaken" title="Phase 1 — Awaken">13</a>
+      <a href="#phase-thunder" title="Phase 2 — Thunder">14</a>
+      <a href="#phase-glint" title="Phase 3 — Glint">15</a>
+      <a href="#closing" title="Kết">16</a>
     </nav>
 
     <main id="deck">
@@ -67,13 +70,11 @@
         </div>
         <div id="particles-js" class="absolute inset-0"></div>
         <div class="forge-grid"></div>
-        <img
-          class="martin hero-mascot"
-          src="/assets/martin.png"
-          alt="MarTin mascot"
-        />
-        <div class="slide-inner hero-inner">
-          <div class="hero-brand-row">
+        <div class="hero-mascot-wrap" aria-hidden="true">
+          <img class="hero-mascot" src="/assets/martin.png" alt="" />
+        </div>
+        <div class="slide-inner hero-inner hero-inner--proposal">
+          <div class="hero-brand-row hero-brand-row--header reveal-up">
             <img
               class="hero-brand-logo"
               src="/assets/easy-chinese-white.png"
@@ -83,19 +84,18 @@
               decoding="async"
             />
           </div>
-          <p class="eyebrow">AOEC Marketing Battle 2026</p>
-          <p class="hero-campaign-label reveal-up">Chiến dịch IMC · Big Idea</p>
-          <h1 class="hero-title split-words">FOMO to PRO</h1>
-          <p class="hero-tagline-vn reveal-up">
-            HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện
-          </p>
-          <p class="hero-copy reveal-up">
-            Đừng để FOMO dẫn dắt, hãy để AOEC giúp bạn dẫn đầu.
-          </p>
-          <div class="hero-badges reveal-up">
-            <span>Forge The Core</span>
-            <span>Micro-size Learning</span>
-            <span>Offline Proof</span>
+          <div class="hero-proposal-stack">
+            <h1 class="hero-proposal-title split-words">PROPOSAL</h1>
+            <p class="hero-battle-subtitle reveal-up">Marketing Battle 2026</p>
+            <hr class="hero-divider reveal-up" aria-hidden="true" />
+            <p class="hero-presented reveal-up">
+              MarTin xuống phố<span
+                class="hero-presented-sparkle"
+                aria-hidden="true"
+              >
+                ✨</span
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -108,60 +108,72 @@
             class="deco-img deco-img--path-soft"
           />
         </div>
-        <div class="slide-inner">
-          <p class="eyebrow eyebrow-with-icon">
-            <i
-              data-lucide="sparkles"
-              class="lucide-eyebrow"
-              aria-hidden="true"
-            ></i>
-            Executive Summary
-          </p>
-          <h2 class="section-title reveal-up">
-            Mục tiêu không chỉ là tạo tiếng vang. Mục tiêu là biến chú ý thành
-            lớp học.
-          </h2>
-          <div class="summary-grid">
-            <article class="glass-card metric-card reveal-card">
+        <div class="slide-inner slide-inner--executive">
+          <header class="imc-slide-head">
+            <p class="eyebrow eyebrow-with-icon">
               <i
-                data-lucide="radio"
-                class="lucide-card-icon"
+                data-lucide="sparkles"
+                class="lucide-eyebrow"
                 aria-hidden="true"
               ></i>
-              <span class="metric-number" data-count="2000000">0</span>
-              <span class="metric-label">Reach toàn chiến dịch</span>
-            </article>
-            <article class="glass-card metric-card reveal-card">
-              <i
-                data-lucide="users-round"
-                class="lucide-card-icon"
-                aria-hidden="true"
-              ></i>
-              <span class="metric-number" data-count="8000">0</span>
-              <span class="metric-label">Leads chất lượng</span>
-            </article>
-            <article class="glass-card metric-card reveal-card">
-              <i
-                data-lucide="badge-check"
-                class="lucide-card-icon"
-                aria-hidden="true"
-              ></i>
-              <span class="metric-number" data-count="3000">0</span>
-              <span class="metric-label">Học viên chuyển đổi</span>
-            </article>
-          </div>
-          <div class="glass-card summary-copy reveal-up">
-            <strong class="insight-heading"
-              >Insight lõi (tiếng nói học viên):</strong
-            >
-            <p class="insight-quote">
-              Tôi ám ảnh với việc thua kém bạn bè trên LinkedIn, nhưng tôi càng
-              sợ hơn việc bỏ tiền mua một tấm &ldquo;bằng rỗng&rdquo; để rồi câm
-              nín khi đi phỏng vấn. Tôi cần một bệ phóng khắc nghiệt,
-              &ldquo;ép&rdquo; tôi phải giao tiếp và dịch thuật được ngay lập
-              tức, biến tấm bằng HSK 3.0 thành vũ khí thực chiến giúp tôi tự tin
-              &ldquo;chốt deal&rdquo; với doanh nghiệp FDI.
+              Executive summary · IMC
             </p>
+            <h2 class="section-title reveal-up">
+              FOMO → PRO: thực chiến HSK 3.0 cho Gen Z (FDI Đà Nẵng).
+            </h2>
+          </header>
+          <div class="summary-grid summary-grid--executive">
+            <article
+              class="glass-card metric-card metric-card--pillar reveal-card"
+            >
+              <span class="pillar-step" aria-hidden="true">01</span>
+              <i
+                data-lucide="triangle-alert"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
+              <span class="metric-label"
+                ><strong>Insight · Challenge</strong></span
+              >
+              <p>
+                Gen Z cần không chỉ chứng chỉ mà còn năng lực giao tiếp và phản
+                xạ thực chiến để vượt phỏng vấn và công việc thật.
+              </p>
+            </article>
+            <article
+              class="glass-card metric-card metric-card--pillar reveal-card"
+            >
+              <span class="pillar-step" aria-hidden="true">02</span>
+              <i
+                data-lucide="swords"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
+              <span class="metric-label"
+                ><strong>Creative · Big idea</strong></span
+              >
+              <p>
+                <strong>FOMO TO PRO</strong> — chuyển áp lực “bị bỏ lại” thành
+                động lực nâng cấp năng lực thực chiến.
+              </p>
+            </article>
+            <article
+              class="glass-card metric-card metric-card--pillar reveal-card"
+            >
+              <span class="pillar-step" aria-hidden="true">03</span>
+              <i
+                data-lucide="route"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
+              <span class="metric-label"
+                ><strong>IMC · Phễu 3 phase</strong></span
+              >
+              <p>
+                <strong>Awaken</strong> → <strong>Thunder</strong> →
+                <strong>Glint</strong>: từ nhận biết đến chuyển đổi học viên.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -174,6 +186,148 @@
             class="deco-img deco-img--radar-burst"
           />
         </div>
+        <div class="slide-inner slide-inner--pestel slide-inner--situation">
+          <div class="pestel-intro">
+            <header class="imc-slide-head">
+              <p class="eyebrow eyebrow-with-icon">
+                <i
+                  data-lucide="line-chart"
+                  class="lucide-eyebrow"
+                  aria-hidden="true"
+                ></i>
+                Situation analysis
+              </p>
+              <h2 class="section-title reveal-up">Market Overview</h2>
+            </header>
+            <div class="situation-split reveal-up">
+              <div class="situation-narrative">
+                <p class="situation-kicker">Macro &amp; demand</p>
+                <p class="body-copy body-copy--tight">
+                  Tiếng Trung ~24% tăng trưởng học viên/năm; Đà Nẵng hưởng FDI,
+                  du lịch, logistics Việt–Trung. Premium lao động biết tiếng
+                  Trung +20–40% thu nhập. Gen Z chuyển từ “học cho biết” sang
+                  “học để thăng tiến”.
+                </p>
+              </div>
+              <ul class="situation-bullets">
+                <li>Hybrid, AI/EdTech, micro-class đang dẫn định dạng học.</li>
+                <li>
+                  15–20 trung tâm: cạnh tranh mạnh, cần định vị thực chiến &amp;
+                  đầu ra rõ.
+                </li>
+              </ul>
+            </div>
+            <p class="pestel-matrix-label reveal-up">Ma trận PESTEL</p>
+            <div class="summary-grid summary-grid--pestel">
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"><strong>P - Political</strong></span>
+                <p>FDI 2025 tại Đà Nẵng vượt 520 triệu USD.</p>
+              </article>
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"><strong>E - Economic</strong></span>
+                <p>Nhân sự biết tiếng Trung có thu nhập cao hơn 20-40%.</p>
+              </article>
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"><strong>S - Social</strong></span>
+                <p>Gen Z chuyển từ “học cho biết” sang “học để thăng tiến”.</p>
+              </article>
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"
+                  ><strong>T - Technology</strong></span
+                >
+                <p>
+                  Hybrid learning, AI/EdTech và micro-size learning tăng mạnh.
+                </p>
+              </article>
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"
+                  ><strong>E - Environment</strong></span
+                >
+                <p>Du lịch quốc tế bùng nổ: 7 triệu khách/11 tháng năm 2025.</p>
+              </article>
+              <article class="glass-card metric-card reveal-card">
+                <span class="metric-label"><strong>L - Legal</strong></span>
+                <p>
+                  HSK 3.0 nâng chuẩn nói - dịch, tăng yêu cầu năng lực thật.
+                </p>
+              </article>
+            </div>
+            <p class="chart-legend-hint reveal-up chart-legend-hint--wide">
+              <strong>Strategic takeaway:</strong> Tiếng Trung trở thành kỹ năng
+              nghề nghiệp then chốt; cơ hội cho thương hiệu định vị thực chiến
+              HSK 3.0 và cam kết đầu ra — không chỉ luyện thi đại trà.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="brand" class="slide">
+        <div class="slide-inner slide-inner--brand-analysis">
+          <p class="eyebrow">Brand Analysis</p>
+          <h2 class="section-title section-title--brand-logo reveal-up">
+            <img
+              class="brand-analysis-logo"
+              src="/assets/easy-chinese-white.png"
+              alt="Easy Chinese AOEC"
+              width="320"
+              height="115"
+              decoding="async"
+            />
+          </h2>
+          <div class="table-grid reveal-card">
+            <article class="table-row">
+              <h3>Tổng quan</h3>
+              <ul>
+                <li>Thành lập năm 2024 tại Đà Nẵng.</li>
+                <li>
+                  Quy mô hiện tại: 3.500+ học viên, 180+ gia sư, 95% đỗ HSK.
+                </li>
+                <li>
+                  Định vị nền tảng: trung tâm tiếng Trung ứng dụng EdTech &amp;
+                  HSK 3.0.
+                </li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Điểm mạnh</h3>
+              <ul>
+                <li>Hệ sinh thái học online + offline hiện đại, linh hoạt.</li>
+                <li>
+                  Lớp Micro-size 5-15 học viên giúp tăng speaking thực chiến.
+                </li>
+                <li>
+                  Hỗ trợ 24/7, video record, học bù, lớp bổ trợ và cam kết đầu
+                  ra.
+                </li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Điểm yếu</h3>
+              <ul>
+                <li>Reach cao nhưng conversion thấp (khoảng 0,25%).</li>
+                <li>
+                  Định vị thương hiệu còn thiên về giải trí, thiếu authority học
+                  thuật.
+                </li>
+                <li>Phụ thuộc đáng kể vào paid ads để duy trì tăng trưởng.</li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Kết luận</h3>
+              <ul>
+                <li>AOEC có nền tảng đào tạo tốt, lợi thế rõ ở thực chiến.</li>
+                <li>Cần tái định vị mạnh theo hướng “học để làm được việc”.</li>
+                <li>
+                  Tối ưu phễu chuyển đổi để chuyển viral thành enrollment bền
+                  vững.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="competitor" class="slide">
         <div class="slide-inner radar-layout">
           <div>
             <p class="eyebrow eyebrow-with-icon">
@@ -182,20 +336,9 @@
                 class="lucide-eyebrow"
                 aria-hidden="true"
               ></i>
-              Competitive Radar
+              Competitive benchmarking
             </p>
-            <h2 class="section-title reveal-up">
-              Bản Đồ Năng Lực Cạnh Tranh Đà Nẵng 2026
-            </h2>
-            <p class="body-copy reveal-up">
-              AOEC được đặt ở vùng mạnh nhờ phối hợp EdTech, lớp micro-size, học
-              phí tối ưu, lộ trình HSK 3.0 thực chiến và cơ chế cam kết rõ ràng.
-            </p>
-            <p class="chart-legend-hint reveal-up">
-              Chọn <strong>Radar</strong> để so khối toàn diện, hoặc
-              <strong>Cột so sánh</strong> để đọc điểm từng tiêu chí. Nhấn từng
-              thương hiệu để ẩn/hiện trên đồ thị.
-            </p>
+            <h2 class="section-title reveal-up">Competitors</h2>
           </div>
           <div class="compete-panel reveal-card">
             <div class="chart-toolbar" role="tablist" aria-label="Kiểu biểu đồ">
@@ -215,102 +358,551 @@
                 role="tab"
                 aria-selected="false"
               >
-                Cột so sánh
+                Bar
+              </button>
+              <button
+                type="button"
+                class="chart-tab"
+                data-chart-mode="scatter"
+                role="tab"
+                aria-selected="false"
+              >
+                Map 2D
               </button>
             </div>
-            <div class="chart-canvas-stack">
+            <div class="chart-stage">
               <div class="chart-view is-active" data-chart-view="radar">
                 <canvas
                   id="competitorRadar"
-                  aria-label="Biểu đồ radar so sánh AOEC với đối thủ"
+                  aria-label="Radar chart đối thủ"
+                  role="img"
                 ></canvas>
               </div>
               <div class="chart-view" data-chart-view="bar" hidden>
                 <canvas
                   id="competitorBar"
-                  aria-label="Biểu đồ cột so sánh điểm theo tiêu chí"
+                  aria-label="Bar chart đối thủ"
+                  role="img"
+                ></canvas>
+              </div>
+              <div class="chart-view" data-chart-view="scatter" hidden>
+                <canvas
+                  id="competitorScatter"
+                  aria-label="Bản đồ định vị 2D đối thủ"
+                  role="img"
                 ></canvas>
               </div>
             </div>
             <div
-              class="dataset-toggles"
               id="datasetToggles"
-              aria-label="Bật tắt từng đối thủ"
+              class="dataset-toggles"
+              aria-label="Bật tắt nhãn thương hiệu"
             ></div>
           </div>
         </div>
       </section>
 
-      <section id="funnel" class="slide">
+      <section
+        id="audience"
+        class="slide audience-slide audience-insight-slide"
+      >
+        <div class="slide-inner slide-inner--segmentation">
+          <header class="segmentation-head">
+            <p class="eyebrow">Khách hàng mục tiêu</p>
+            <h2 class="section-title reveal-up">Phân đoạn thị trường</h2>
+          </header>
+          <div
+            class="segmentation-table-wrap deployment-overview-table reveal-card"
+          >
+            <table class="imc-table imc-table--segment">
+              <thead>
+                <tr>
+                  <th scope="col">Tiêu chí phân khúc</th>
+                  <th scope="col">Nhóm 1 – Career FOMO Competitors</th>
+                  <th scope="col">Nhóm 2 – Practical Income Seekers</th>
+                  <th scope="col">Nhóm 3 – Casual Learners</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Độ tuổi</th>
+                  <td>21–25</td>
+                  <td>20–25</td>
+                  <td>18–22</td>
+                </tr>
+                <tr>
+                  <th scope="row">Giai đoạn</th>
+                  <td>Sinh viên năm cuối / Fresher</td>
+                  <td>Người đã đi làm</td>
+                  <td>Sinh viên đầu đại học</td>
+                </tr>
+                <tr>
+                  <th scope="row">Động lực học</th>
+                  <td>Sợ bị bỏ lại trong cuộc đua nghề nghiệp</td>
+                  <td>Muốn tăng thu nhập</td>
+                  <td>Học thêm kỹ năng</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mức độ FOMO</th>
+                  <td>Rất cao</td>
+                  <td>Thấp</td>
+                  <td>Trung bình</td>
+                </tr>
+                <tr>
+                  <th scope="row">Áp lực chính</th>
+                  <td>Bạn bè có offer FDI, internship, HSK</td>
+                  <td>Thu nhập chưa tốt</td>
+                  <td>Muốn phát triển bản thân</td>
+                </tr>
+                <tr>
+                  <th scope="row">Thái độ với HSK</th>
+                  <td>“Điều kiện cạnh tranh bắt buộc”</td>
+                  <td>“Công cụ hỗ trợ công việc”</td>
+                  <td>“Một kỹ năng cộng thêm”</td>
+                </tr>
+                <tr>
+                  <th scope="row">Nỗi sợ lớn nhất</th>
+                  <td>“Có bằng nhưng không đủ năng lực để đi làm”</td>
+                  <td>Khó tăng lương</td>
+                  <td>Tụt trend ngoại ngữ</td>
+                </tr>
+                <tr>
+                  <th scope="row">Điều họ cần thật sự</th>
+                  <td>Giao tiếp &amp; phản xạ thực chiến</td>
+                  <td>Giao tiếp công việc</td>
+                  <td>Trải nghiệm học tập</td>
+                </tr>
+                <tr>
+                  <th scope="row">Hành vi chọn trung tâm</th>
+                  <td>Quan tâm đầu ra &amp; thực chiến</td>
+                  <td>Quan tâm tính ứng dụng</td>
+                  <td>Quan tâm giá &amp; ưu đãi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="segmentation-foot reveal-up">
+            <strong>Focus chiến dịch:</strong> Nhóm 1 — Career FOMO Competitors.
+          </p>
+
+          <div class="audience-insight-follow">
+            <p class="eyebrow eyebrow-with-icon">
+              <i
+                data-lucide="target"
+                class="lucide-eyebrow"
+                aria-hidden="true"
+              ></i>
+              Lập luận chọn nhóm
+            </p>
+            <h2 class="section-title reveal-up">
+              Vì sao chọn Nhóm 1 — Career FOMO
+            </h2>
+            <div class="insight-rationale reveal-card">
+              <p class="insight-rationale-p">
+                AOEC lựa chọn nhóm <strong>“Career FOMO Competitors”</strong> —
+                sinh viên năm cuối và fresher chuẩn bị bước vào doanh nghiệp FDI
+                — làm khách hàng mục tiêu trọng tâm vì đây là nhóm chịu áp lực
+                FOMO nghề nghiệp mạnh nhất.
+              </p>
+              <p class="insight-rationale-p">
+                Họ liên tục nhìn thấy bạn bè khoe internship, offer FDI và chứng
+                chỉ HSK trên LinkedIn/TikTok, từ đó hình thành nỗi sợ bị bỏ lại
+                trong cuộc đua nghề nghiệp. Tuy nhiên, điều họ lo lắng hơn cả
+                không phải là “chưa có bằng”, mà là
+                <strong>có bằng nhưng không đủ năng lực thực chiến</strong> khi
+                bước vào doanh nghiệp thật.
+              </p>
+              <p class="insight-rationale-p">
+                Điều này phù hợp trực tiếp với định vị đào tạo thực chiến, phản
+                xạ giao tiếp và mô hình Micro-size của AOEC.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="persona" class="slide">
         <div class="slide-inner">
+          <p class="eyebrow">Persona</p>
+          <h2 class="section-title reveal-up">
+            Nguyễn Minh Khôi — Career FOMO
+          </h2>
+          <div class="persona-layout">
+            <aside class="persona-portrait reveal-card">
+              <div class="persona-image-wrap">
+                <img
+                  src="/assets/persona.jpg"
+                  alt="Persona mục tiêu chiến dịch AOEC"
+                  class="persona-image"
+                />
+              </div>
+              <p class="persona-portrait-name">Nguyễn Minh Khôi</p>
+              <p class="persona-portrait-meta">
+                21 tuổi · SV năm cuối Logistics · Đà Nẵng
+              </p>
+            </aside>
+            <div class="persona-board reveal-card">
+              <div class="persona-card persona-card--intro">
+                <h3>Nhân khẩu học</h3>
+                <ul>
+                  <li>
+                    Sinh viên năm cuối Logistics, chuẩn bị vào doanh nghiệp FDI.
+                  </li>
+                  <li>Thu nhập 3-5 triệu/tháng, áp lực cạnh tranh cao.</li>
+                  <li>
+                    Mục tiêu công việc: 15-20 triệu/tháng trong môi trường
+                    Trung-Đài.
+                  </li>
+                </ul>
+              </div>
+              <div class="persona-card">
+                <h3>Tâm lý học</h3>
+                <ul>
+                  <li>
+                    Muốn thương hiệu hành động thực chất, không nói suông.
+                  </li>
+                  <li>
+                    Sợ nhất cảm giác có chứng chỉ nhưng phản xạ yếu khi phỏng
+                    vấn.
+                  </li>
+                  <li>
+                    Ưu tiên môi trường học khắc nghiệt để dùng được tiếng Trung
+                    thật.
+                  </li>
+                </ul>
+              </div>
+              <div class="persona-card">
+                <h3>Thói quen &amp; sở thích</h3>
+                <ul>
+                  <li>
+                    Xem TikTok/YouTube nội dung hướng nghiệp và review trung
+                    tâm.
+                  </li>
+                  <li>
+                    Thích format challenge, test ngắn, nội dung trực diện.
+                  </li>
+                  <li>Đọc feedback thật trước khi ra quyết định.</li>
+                </ul>
+              </div>
+              <div class="persona-card">
+                <h3>Hành vi media</h3>
+                <ul>
+                  <li>TikTok, Facebook group tuyển dụng, LinkedIn.</li>
+                  <li>
+                    Tìm kiếm từ khóa HSK 3.0, phỏng vấn tiếng Trung, việc làm
+                    FDI.
+                  </li>
+                  <li>
+                    Tương tác cao với nội dung có case thực tế và mentor/HR.
+                  </li>
+                </ul>
+              </div>
+              <div class="persona-card">
+                <h3>Nỗi đau &amp; rào cản</h3>
+                <ul>
+                  <li>“Có bằng nhưng không đủ năng lực để đi làm”.</li>
+                  <li>
+                    Sợ học xong vẫn không dùng được trong môi trường doanh
+                    nghiệp.
+                  </li>
+                  <li>
+                    Ngại lớp đông, thiếu sửa lỗi cá nhân và thiếu cam kết đầu
+                    ra.
+                  </li>
+                </ul>
+              </div>
+              <div class="persona-card">
+                <h3>Hành vi quyết định</h3>
+                <ul>
+                  <li>Ưu tiên trung tâm có lộ trình thực chiến + đầu ra rõ.</li>
+                  <li>
+                    Quan tâm mock interview, lớp học thử, feedback before/after.
+                  </li>
+                  <li>
+                    Cần bằng chứng tiến bộ thay vì chỉ hứa hẹn truyền thông.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="threec" class="slide slide-threec-panel">
+        <div class="slide-inner slide-inner--threec-panel">
+          <header class="threec-panel-head imc-slide-head">
+            <p class="eyebrow eyebrow-with-icon">
+              <i
+                data-lucide="layers"
+                class="lucide-eyebrow"
+                aria-hidden="true"
+              ></i>
+              3C &amp; Consumer insight
+            </p>
+          </header>
+          <div class="threec-panel-row">
+            <article class="threec-panel-card reveal-card">
+              <span class="threec-pill">Category</span>
+              <div class="threec-panel-body">
+                <p>
+                  Tiếng Trung dẫn đầu xu hướng ngoại ngữ tại Việt Nam (tăng
+                  ~24%/năm), vượt Nhật – Hàn.
+                </p>
+                <p>
+                  HSK 3.0 chuyển trọng tâm từ học thuộc sang ứng dụng thực tế
+                  &amp; dịch thuật, nhưng thị trường vẫn “học nhiều – dùng ít”.
+                </p>
+                <p>
+                  Niềm tin bị bào mòn do nhiều trung tâm/cá nhân thiếu chuẩn
+                  mực, lạm dụng AI và quảng cáo sai lệch.
+                </p>
+              </div>
+            </article>
+            <article class="threec-panel-card reveal-card">
+              <span class="threec-pill">Company</span>
+              <div class="threec-panel-body">
+                <p>
+                  AOEC có lợi thế EdTech với aoec.vn, bộ từ vựng HSK 3.0 và lớp
+                  nhỏ (5–15 học viên) để tăng thực hành.
+                </p>
+                <p>
+                  Chính sách “đảo ngược rủi ro” (cam kết đầu ra, hoàn tiền) tạo
+                  lợi thế minh bạch.
+                </p>
+                <p>
+                  Tuy nhiên phụ thuộc quảng cáo và nội dung giải trí → reach cao
+                  (~1,4M) nhưng chuyển đổi thấp (~0,25%).
+                </p>
+              </div>
+            </article>
+            <article class="threec-panel-card reveal-card">
+              <span class="threec-pill">Customer</span>
+              <div class="threec-panel-body">
+                <p>
+                  Gen Z chịu áp lực “LinkedIn Envy”, FOMO nghề nghiệp — cần
+                  chứng chỉ nhanh để làm đẹp CV.
+                </p>
+                <p>
+                  Lo sợ “tấm bằng rỗng”: học xong nhưng không dùng được trong
+                  FDI hoặc lo bị AI thay thế.
+                </p>
+                <p>
+                  Ưu tiên giải pháp thực dụng, cá nhân hóa, học nhanh – ứng dụng
+                  ngay (hybrid learning).
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="threec-flow" aria-hidden="true">
+            <i data-lucide="chevrons-down" class="threec-flow-icon"></i>
+          </div>
+          <article
+            class="threec-insight-block threec-insight-block--hero reveal-card"
+          >
+            <span class="threec-pill threec-pill--insight">Insight</span>
+            <blockquote class="threec-insight-quote">
+              Tôi sợ nhất không phải thua kém bạn bè trên LinkedIn, mà là cảm
+              giác ghi HSK lên CV rồi vẫn chết lặng khi bước vào phòng phỏng
+              vấn. Tôi không cần một tấm bằng để khoe. Tôi cần một nơi đủ khắc
+              nghiệt để ép tôi dùng được tiếng Trung thật, trước khi doanh
+              nghiệp phát hiện tôi chỉ giỏi học thuộc.
+            </blockquote>
+          </article>
+        </div>
+      </section>
+
+      <section id="objectives" class="slide">
+        <div class="slide-inner">
+          <p class="eyebrow">Campaign objectives</p>
+          <h2 class="section-title reveal-up">Objectives</h2>
+          <div class="table-grid reveal-card">
+            <article class="table-row">
+              <h3>Marketing Objective</h3>
+              <ul>
+                <li>
+                  Tăng chuyển đổi bền vững từ “học để thi” sang “học để dùng
+                  được”.
+                </li>
+                <li>Chuyển đổi 3.000 học viên mới trong campaign.</li>
+                <li>Tối ưu phễu từ reach đến enrollment theo từng phase.</li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Communication Objective</h3>
+              <ul>
+                <li>
+                  Xây dựng niềm tin AOEC là trung tâm tiếng Trung thực chiến cho
+                  Gen Z.
+                </li>
+                <li>Tạo nhận diện mạnh cho thông điệp “FOMO TO PRO”.</li>
+                <li>
+                  Củng cố authority học thuật qua proof, mentor và trải nghiệm
+                  thật.
+                </li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Business Objective</h3>
+              <ul>
+                <li>
+                  Gia tăng chất lượng lead và giảm rủi ro cảm nhận trước đăng
+                  ký.
+                </li>
+                <li>
+                  Thu 8.000 leads chất lượng từ test và AI speaking challenge.
+                </li>
+                <li>Tăng tỷ lệ trial-to-enrollment qua class experience.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="bigidea" class="slide">
+        <div class="slide-deco slide-deco--bigidea" aria-hidden="true">
+          <img
+            src="/img/deco-wave.svg"
+            alt=""
+            class="deco-img deco-img--wave-soft"
+          />
+        </div>
+        <div class="slide-inner big-idea slide-inner--imc-centered">
           <p class="eyebrow eyebrow-with-icon">
             <i
-              data-lucide="rocket"
+              data-lucide="lightbulb"
               class="lucide-eyebrow"
               aria-hidden="true"
             ></i>
-            Growth Hacking Funnel
+            Creative platform
+          </p>
+          <h2 class="section-title reveal-up">BIG IDEA</h2>
+          <div class="big-idea-visual reveal-up">
+            <img
+              src="/assets/bigidea.png"
+              alt="Big Idea FOMO to PRO"
+              class="big-idea-image"
+            />
+          </div>
+          <p class="big-idea-subline reveal-up">
+            HSK 3.0: từ áp lực trực tuyến đến thực lực trực diện
+          </p>
+          <div class="big-idea-panel reveal-card">
+            <p class="big-idea-vn-explain">
+              AOEC biến áp lực bị bỏ lại trong cuộc đua nghề nghiệp thành động
+              lực nâng cấp năng lực thực chiến: Gen Z không chỉ có HSK mà đủ bản
+              lĩnh bước vào môi trường FDI.<br /><br />
+              <strong>Ẩn dụ visual:</strong> “chiếc gậy bằng thép” — năng lực
+              được rèn tại AOEC.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="keymessage" class="slide">
+        <div
+          class="slide-inner big-idea slide-inner--imc-centered slide-inner--keymessage"
+        >
+          <p class="eyebrow eyebrow-with-icon">
+            <i
+              data-lucide="message-circle"
+              class="lucide-eyebrow"
+              aria-hidden="true"
+            ></i>
+            Key message
           </p>
           <h2 class="section-title reveal-up">
-            Ba nhịp tăng trưởng — từ cảnh tỉnh đến chốt sales.
+            Đừng để FOMO dẫn dắt,
+            <p>Hãy để AOEC giúp bạn dẫn đầu.</p>
           </h2>
-          <p class="body-copy reveal-up">
-            Đúng lộ trình IMC trong đề bài: <strong>Awaken</strong> giáng đòn
-            “bằng rỗng”, <strong>Thunder</strong> thu lead bằng gamification
-            &amp; AI, <strong>Glint</strong> chốt bằng cam kết thép và minh
-            chứng offline.
-          </p>
-          <div class="funnel-pipeline">
-            <article class="pipeline-card tilt-card reveal-card" data-tilt>
-              <span class="pipeline-step">Nhịp 01</span>
-              <h3 class="pipeline-title">
-                <i
-                  data-lucide="sunrise"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Awaken
-              </h3>
-              <p>
-                Đánh thức FOMO &amp; LinkedIn envy; OOH + phim ngắn cảnh tỉnh về
-                học vẹt / chứng chỉ không dùng được.
-              </p>
-              <a class="pipeline-link" href="#phase-awaken">Chi tiết →</a>
-            </article>
-            <span class="pipeline-arrow" aria-hidden="true"></span>
-            <article class="pipeline-card tilt-card reveal-card" data-tilt>
-              <span class="pipeline-step">Nhịp 02</span>
-              <h3 class="pipeline-title">
-                <i
-                  data-lucide="zap"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Thunder
-              </h3>
-              <p>
-                Thu thập lead chất lượng: thử thách, quiz AI, livestream clinic
-                — chi phí tiệm cận 0 đồng / lead.
-              </p>
-              <a class="pipeline-link" href="#phase-thunder">Chi tiết →</a>
-            </article>
-            <span class="pipeline-arrow" aria-hidden="true"></span>
-            <article class="pipeline-card tilt-card reveal-card" data-tilt>
-              <span class="pipeline-step">Nhịp 03</span>
-              <h3 class="pipeline-title">
-                <i
-                  data-lucide="gem"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Glint
-              </h3>
-              <p>
-                Chuyển đổi: open class, “hợp đồng thép” đảo ngược rủi ro,
-                counselor chốt lớp theo nhóm.
-              </p>
-              <a class="pipeline-link" href="#phase-glint">Chi tiết →</a>
-            </article>
+          <blockquote class="key-message-quote reveal-up">
+            "Thay vì để nỗi sợ khiến bạn học trong mù quáng, hãy để AOEC biến
+            việc học thành lợi thế cạnh tranh bằng một tấm bằng thực chất."
+          </blockquote>
+          <p class="key-message-pillars-label reveal-up">Message pillars</p>
+          <div class="idea-strip idea-strip--keymessage">
+            <span>LinkedIn Envy</span>
+            <span>Sợ bằng rỗng</span>
+            <span>Luyện nói &amp; dịch</span>
+            <span>Thực chiến FDI</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="funnel" class="slide">
+        <div class="slide-inner slide-inner--imc-plan">
+          <p class="imc-plan-head reveal-up"><strong>IMC PLAN</strong></p>
+          <div class="deployment-overview-table reveal-card">
+            <table class="imc-table">
+              <thead>
+                <tr>
+                  <th>HẠNG MỤC</th>
+                  <th>PHASE 1 – AWAKEN</th>
+                  <th>PHASE 2 – THUNDER</th>
+                  <th>PHASE 3 – GLINT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thời gian</td>
+                  <td>Tháng 6 – 7 / 2026</td>
+                  <td>Tháng 8 – 10 / 2026</td>
+                  <td>Tháng 11 – 12 / 2026</td>
+                </tr>
+                <tr>
+                  <td>Mục tiêu</td>
+                  <td>Đánh thức FOMO nghề nghiệp</td>
+                  <td>Biến FOMO thành nhu cầu học thật</td>
+                  <td>Chuyển đổi thành học viên</td>
+                </tr>
+                <tr>
+                  <td>Key Hook</td>
+                  <td>
+                    “Bạn học tiếng Trung vì muốn giỏi hơn… hay chỉ vì sợ bị bỏ
+                    lại?”
+                  </td>
+                  <td>“Có HSK chưa chắc làm được việc.”</td>
+                  <td>“Đừng để phỏng vấn lần đầu bạn dùng tiếng Trung.”</td>
+                </tr>
+                <tr>
+                  <td>Công cụ</td>
+                  <td>Creator Seeding, TikTok, FB Debate</td>
+                  <td>Spark Ads, HSK Test, AI Web-app, Lead Form</td>
+                  <td>Livestream, Testimonial, Retargeting Ads</td>
+                </tr>
+                <tr>
+                  <td>KPI</td>
+                  <td>
+                    Reach: 1.200.000<br />Leads: 2.000<br />Học viên mới: 300
+                  </td>
+                  <td>
+                    Reach: 600.000<br />Leads: 4.000<br />Học viên mới: 1.200
+                  </td>
+                  <td>
+                    Reach: 200.000<br />Leads: 2.000<br />Học viên mới: 1.500
+                  </td>
+                </tr>
+                <tr>
+                  <td>Hoạt động triển khai</td>
+                  <td>
+                    TikTok FOMO Series<br />Social Debate Creator<br />Storytelling
+                  </td>
+                  <td>
+                    Reality Check Video<br />HSK Online Test AI<br />Speaking
+                    Challenge
+                  </td>
+                  <td>
+                    Transformation Story Mock<br />Interview Livestream<br />Micro-size
+                    Class Experience
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ngân sách</td>
+                  <td>105 triệu (35%)</td>
+                  <td>120 triệu (40%)</td>
+                  <td>75 triệu (25%)</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -353,82 +945,62 @@
                     class="lucide-eyebrow"
                     aria-hidden="true"
                   ></i>
-                  Nhịp 01 · Awaken
-                </p>
-                <p class="phase-hero-tagline">
-                  Cảnh tỉnh · OOH &amp; drama ngắn
+                  Phase 1 · AWAKEN — Khơi FOMO nghề nghiệp
                 </p>
               </div>
             </div>
-            <h2 class="section-title reveal-up">
-              Cảnh tỉnh: FOMO không đủ, cần thấy rủi ro “bằng rỗng”.
-            </h2>
             <p class="phase-hook-banner phase-hook-banner--awaken reveal-up">
-              <span class="phase-hook-label">Hook</span> “Bạn đang tụt bao nhiêu
-              level?” — kéo về lời giải AOEC.
+              <span class="phase-hook-label">Key Hook</span> “Bạn học tiếng
+              Trung vì muốn giỏi hơn… hay chỉ vì sợ bị bỏ lại?”
             </p>
           </header>
-          <div class="phase-detail-grid">
-            <div
-              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
-              data-tilt
-            >
-              <div class="phase-block-head">
-                <i
-                  data-lucide="target"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Mục tiêu</h3>
-              </div>
+          <div class="table-grid reveal-card">
+            <article class="table-row">
+              <h3>Mục tiêu nhịp</h3>
               <ul>
                 <li>
-                  Nhận diện nỗi sợ thua trên LinkedIn / MXH và nỗi sợ đầu tư
-                  chứng chỉ vô dụng khi phỏng vấn.
+                  Đánh thức FOMO nghề nghiệp; biến áp lực “bị bỏ lại” thành nhận
+                  thức về rủi ro “có bằng nhưng không dùng được”.
                 </li>
                 <li>
-                  Dựng frame: HSK 3.0 bắt buộc Nói + Dịch — học vẹt = điểm rơi
-                  thực tế.
+                  Tạo discussion virality trên MXH về mục đích học HSK thật sự.
                 </li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="radio"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Kênh &amp; chạm</h3>
-              </div>
+            </article>
+            <article class="table-row">
+              <h3>Công cụ &amp; KPI</h3>
               <ul>
                 <li>
-                  OOH (MarTin xuống phố), phim ngắn drama học đường / đi phỏng
-                  vấn.
+                  <strong>Công cụ:</strong> Creator Seeding, TikTok, Facebook
+                  Debate, Spark Ads.
                 </li>
                 <li>
-                  Short video, meme học thuật, quiz “bạn đang tụt bao nhiêu
-                  level?”
+                  <strong>KPI:</strong> Reach, Engagement, Viral Discussion.
                 </li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="activity"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Chỉ số &amp; hook</h3>
-              </div>
+            </article>
+            <article class="table-row">
+              <h3>Hoạt động triển khai cụ thể — PHASE AWAKEN</h3>
               <ul>
-                <li>Reach, completion video, lượt làm quiz.</li>
                 <li>
-                  <strong>Hook:</strong> “Bạn đang tụt bao nhiêu level?” — dẫn
-                  về lời giải AOEC.
+                  <strong>TikTok Series — “FOMO HSK”:</strong> chuỗi video ngắn
+                  khai thác tình huống Gen Z bị áp lực khi thấy bạn bè flex
+                  chứng chỉ HSK, tin tuyển dụng (JD) yêu cầu tiếng Trung, không
+                  gian LinkedIn “toàn chứng chỉ”, v.v.
+                </li>
+                <li>
+                  <strong>Social Debate — “HSK để làm gì?”:</strong> khởi tạo
+                  poll / tranh luận trên TikTok &amp; Facebook giữa hai luồng:
+                  học để có giá trị thật trong công việc vs chỉ học để có “tấm
+                  bằng trên CV”.
+                </li>
+                <li>
+                  <strong>Creator Storytelling:</strong> booking creator định
+                  hướng nghề nghiệp, creator/HR chia sẻ câu chuyện có HSK nhưng
+                  vẫn thất bại phỏng vấn vì thiếu phản xạ và giao tiếp thực tế.
                 </li>
               </ul>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -471,72 +1043,63 @@
                     class="lucide-eyebrow"
                     aria-hidden="true"
                   ></i>
-                  Nhịp 02 · Thunder
-                </p>
-                <p class="phase-hero-tagline">
-                  Gamification · AI quiz · Live clinic
+                  Phase 2 · THUNDER — HSK không đồng nghĩa làm được việc
                 </p>
               </div>
             </div>
-            <h2 class="section-title reveal-up">
-              Kích hoạt: lead phải “chơi” tiếng Trung, không chỉ xem.
-            </h2>
             <p class="phase-hook-banner phase-hook-banner--thunder reveal-up">
-              <span class="phase-hook-label">Hook</span> “7 ngày thoát học vẹt.”
+              <span class="phase-hook-label">Key Hook</span> “Có HSK chưa chắc
+              làm được việc.”
             </p>
           </header>
-          <div class="phase-detail-grid">
-            <div
-              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
-              data-tilt
-            >
-              <div class="phase-block-head">
-                <i
-                  data-lucide="target"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Mục tiêu</h3>
-              </div>
+          <div class="table-grid reveal-card">
+            <article class="table-row">
+              <h3>Mục tiêu nhịp</h3>
               <ul>
                 <li>
-                  Thu <strong>8.000 leads</strong> chất lượng với chi phí / lead
-                  thấp nhờ gamification &amp; AI.
+                  Biến FOMO thành nhu cầu học có dữ kiện: ép người dùng tự nhận
+                  diện lỗ hổng listening / speaking / ứng dụng trong tình huống
+                  thực.
                 </li>
-                <li>Ép lộ lỗ hổng nghe — nói — dịch để tư vấn có dữ liệu.</li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="gamepad-2"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Kênh &amp; chạm</h3>
-              </div>
+            </article>
+            <article class="table-row">
+              <h3>Công cụ &amp; KPI</h3>
               <ul>
-                <li>Thử thách 7 ngày, leaderboard, voucher học thử.</li>
                 <li>
-                  Livestream clinic sửa phát âm, mini-test sau mỗi buổi,
-                  retargeting theo hành vi quiz.
+                  <strong>Công cụ:</strong> HSK Online Test (“REAL SKILL
+                  CHECK”), AI Speaking Challenge mini web-app, Lead Form thu
+                  profile, Spark Ads / retargeting theo completion test.
+                </li>
+                <li><strong>KPI:</strong> Leads, Test Participation, CPL.</li>
+              </ul>
+            </article>
+            <article class="table-row">
+              <h3>Hoạt động triển khai cụ thể — PHASE THUNDER</h3>
+              <ul>
+                <li>
+                  <strong>Reality Check Video — “HSK này… thật không?”:</strong>
+                  kịch bản học viên có HSK nhưng “đơ” khi nhận cuộc gọi tiếng
+                  Trung, đứng hình phỏng vấn realtime — chứng minh lệch giữa
+                  điểm thi và năng lực làm việc.
+                </li>
+                <li>
+                  <strong>REAL SKILL CHECK — Test HSK Online:</strong> người
+                  dùng làm bài test phản xạ &amp; speaking thực tế → nhận điểm
+                  &amp; lộ trình học được cá nhân hóa.
+                </li>
+                <li>
+                  <strong>AI Speaking Challenge:</strong> thử thách AI chấm bài
+                  speaking 60 giây, leaderboard so sánh theo khu vực / trường
+                  đại học để khuyến khích chia sẻ và lan tỏa.
+                </li>
+                <li>
+                  <strong>Creator / HR Reaction:</strong> clip reaction về định
+                  hướng HSK 3.0 dưới góc nhìn “thi để có điểm” vs “học để làm
+                  việc thật tại doanh nghiệp”.
                 </li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="activity"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Chỉ số &amp; hook</h3>
-              </div>
-              <ul>
-                <li>Tỷ lệ hoàn thành thử thách, CPL, số booking học thử.</li>
-                <li><strong>Hook:</strong> “7 ngày thoát học vẹt.”</li>
-              </ul>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -579,291 +1142,65 @@
                     class="lucide-eyebrow"
                     aria-hidden="true"
                   ></i>
-                  Nhịp 03 · Glint
-                </p>
-                <p class="phase-hero-tagline">
-                  Open class · “Hợp đồng thép” · Proof
+                  Phase 3 · GLINT — Proof &amp; trải nghiệm đóng học viên
                 </p>
               </div>
             </div>
-            <h2 class="section-title reveal-up">
-              Chốt niềm tin: thấy lớp, thấy tiến bộ, thấy văn bản cam kết.
-            </h2>
             <p class="phase-hook-banner phase-hook-banner--glint reveal-up">
-              <span class="phase-hook-label">Hook</span> “Đến lớp là thấy mình
-              tiến bộ.”
+              <span class="phase-hook-label">Key Hook</span> “Đừng để phỏng vấn
+              là lần đầu tiên bạn dùng tiếng Trung.”
             </p>
           </header>
-          <div class="phase-detail-grid">
-            <div
-              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
-              data-tilt
-            >
-              <div class="phase-block-head">
-                <i
-                  data-lucide="target"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Mục tiêu</h3>
-              </div>
+          <div class="table-grid reveal-card">
+            <article class="table-row">
+              <h3>Mục tiêu nhịp</h3>
               <ul>
                 <li>
-                  Chuyển lead thành <strong>3.000 học viên</strong> qua minh
-                  chứng trực diện và giảm rủi ro cảm nhận.
-                </li>
-                <li>
-                  Biến “đã thử” thành “đã ký” bằng social proof và điều khoản rõ
-                  ràng.
+                  Chuyển đổi thành học viên trả phí nhờ bằng chứng không thể phủ
+                  nhận: tiến bộ speaking mock interview, trải nghiệm Micro-size
+                  và minh chứng đầu ra.
                 </li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="handshake"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Kênh &amp; chạm</h3>
-              </div>
+            </article>
+            <article class="table-row">
+              <h3>Công cụ &amp; KPI</h3>
               <ul>
                 <li>
-                  Open class offline, review thật từ học viên, counselor theo
-                  nhóm bạn học.
+                  <strong>Công cụ:</strong> Livestream có HR / mentor AOEC, nhắn
+                  “success proof” trên owned media, funnel retarget học viên đã
+                  làm test, lớp trải nghiệm giới hạn chỗ.
                 </li>
                 <li>
-                  “Hợp đồng thép” / chính sách đảo ngược rủi ro (cam kết đầu ra,
-                  quy trình hoàn học phí minh bạch).
+                  <strong>KPI:</strong> Registration, Conversion Rate,
+                  Attendance (tham gia demo / học thử).
                 </li>
               </ul>
-            </div>
-            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
-              <div class="phase-block-head">
-                <i
-                  data-lucide="activity"
-                  class="lucide-phase-block"
-                  aria-hidden="true"
-                ></i>
-                <h3>Chỉ số &amp; hook</h3>
-              </div>
+            </article>
+            <article class="table-row">
+              <h3>Hoạt động triển khai cụ thể — PHASE GLINT</h3>
               <ul>
-                <li>Trial attendance, tỷ lệ deposit, NPS sau buổi đầu.</li>
-                <li><strong>Hook:</strong> “Đến lớp là thấy mình tiến bộ.”</li>
+                <li>
+                  <strong>Transformation Story — “FOMO TO PRO”:</strong>
+                  storytelling hành trình học viên từ học vì sợ tụt lại đến lúc
+                  tự tin giao tiếp và làm việc bằng tiếng Trung.
+                </li>
+                <li>
+                  <strong>TikTok Livestream — “REAL INTERVIEW”:</strong> phiên
+                  mock interview có mentor AOEC, HR khách mời và học viên thử
+                  speaking realtime trước audience.
+                </li>
+                <li>
+                  <strong>Success Proof Content:</strong> feedback học viên có
+                  thể định danh được, ghép before / after khả năng nói, kết quả
+                  HSK và minh chứng internship / job offer.
+                </li>
+                <li>
+                  <strong>Micro-size Class Experience:</strong> mời trải nghiệm
+                  lớp học thử chỉ với nhóm nhỏ 5–7 người nhằm chứng minh mô hình
+                  ép phản xạ &amp; sửa lỗi cá nhân hóa.
+                </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="audience" class="slide audience-slide">
-        <div class="slide-inner two-col">
-          <div>
-            <p class="eyebrow">Audience Tension</p>
-            <h2 class="section-title reveal-up">
-              Từ áp lực trực tuyến đến hành động trực diện.
-            </h2>
-            <p class="body-copy reveal-up">
-              Chiến dịch không phủ nhận FOMO. Nó chuyển hóa FOMO thành một lời
-              mời có cấu trúc: kiểm tra hiện trạng, luyện một kỹ năng nhỏ, nhận
-              phản hồi ngay, rồi bước vào lớp thật.
-            </p>
-          </div>
-          <div class="tension-stack">
-            <div class="tension-item reveal-card">
-              <span class="tension-label"
-                ><i
-                  data-lucide="flame"
-                  class="lucide-tension"
-                  aria-hidden="true"
-                ></i>
-                FOMO</span
-              >
-              <p>Sợ thua bạn bè, chậm chứng chỉ, mất cơ hội.</p>
-            </div>
-            <div class="tension-item reveal-card">
-              <span class="tension-label"
-                ><i
-                  data-lucide="shield-off"
-                  class="lucide-tension"
-                  aria-hidden="true"
-                ></i>
-                Friction</span
-              >
-              <p>Sợ lớp đông, ngại phát âm, học online dễ bỏ cuộc.</p>
-            </div>
-            <div class="tension-item reveal-card">
-              <span class="tension-label"
-                ><i
-                  data-lucide="eye"
-                  class="lucide-tension"
-                  aria-hidden="true"
-                ></i>
-                Proof</span
-              >
-              <p>Muốn thấy tiến bộ cụ thể trước khi đóng học phí.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="bigidea" class="slide">
-        <div class="slide-deco slide-deco--bigidea" aria-hidden="true">
-          <img
-            src="/img/deco-wave.svg"
-            alt=""
-            class="deco-img deco-img--wave-soft"
-          />
-        </div>
-        <div class="slide-inner big-idea">
-          <p class="eyebrow eyebrow-with-icon">
-            <i
-              data-lucide="lightbulb"
-              class="lucide-eyebrow"
-              aria-hidden="true"
-            ></i>
-            Tái định vị thương hiệu &amp; Big Idea
-          </p>
-          <p class="big-idea-label reveal-up">BIG IDEA</p>
-          <h2 class="fomo-pro-headline reveal-up">FOMO to PRO</h2>
-          <p class="big-idea-vn-explain reveal-up">
-            <span class="vn-explain-lead">Ý nghĩa bằng tiếng Việt:</span>
-            <strong
-              >HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện</strong
-            >
-          </p>
-          <p class="key-message reveal-up">
-            <strong>KEY MESSAGE:</strong> Đừng để FOMO dẫn dắt, hãy để AOEC giúp
-            bạn dẫn đầu.
-          </p>
-          <blockquote class="key-message-quote reveal-up">
-            Thay vì để nỗi sợ khiến bạn học trong mù quáng, hãy để AOEC biến
-            việc học thành lợi thế cạnh tranh bằng một tấm bằng thực chất.
-          </blockquote>
-          <div class="idea-strip">
-            <span>LinkedIn Envy</span>
-            <span>Sợ bằng rỗng</span>
-            <span>Luyện nói &amp; dịch</span>
-            <span>Thực chiến FDI</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="content" class="slide">
-        <div class="slide-inner">
-          <p class="eyebrow">Content Engine</p>
-          <h2 class="section-title reveal-up">
-            Nội dung được thiết kế như một đường ray chuyển đổi.
-          </h2>
-          <div class="content-grid">
-            <article class="content-card reveal-card">
-              <h3 class="content-card-title">
-                <i
-                  data-lucide="clapperboard"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Reels/TikTok
-              </h3>
-              <p>
-                POV đi thi HSK, lỗi phát âm phổ biến, “một câu nói cứu buổi
-                phỏng vấn”.
-              </p>
             </article>
-            <article class="content-card reveal-card">
-              <h3 class="content-card-title">
-                <i
-                  data-lucide="clipboard-list"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Quiz Lead Magnet
-              </h3>
-              <p>
-                Test 90 giây xác định lỗ hổng: nghe, đọc, khẩu ngữ, ngữ pháp.
-              </p>
-            </article>
-            <article class="content-card reveal-card">
-              <h3 class="content-card-title">
-                <i
-                  data-lucide="mic-2"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Livestream Clinic
-              </h3>
-              <p>
-                Giảng viên sửa lỗi thật, MarTin làm mascot dẫn dắt thử thách.
-              </p>
-            </article>
-            <article class="content-card reveal-card">
-              <h3 class="content-card-title">
-                <i
-                  data-lucide="school"
-                  class="lucide-inline"
-                  aria-hidden="true"
-                ></i>
-                Offline Trial
-              </h3>
-              <p>
-                Buổi học nhỏ, có mini report sau lớp và voucher đăng ký nhanh.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="kpi" class="slide">
-        <div class="slide-inner kpi-layout">
-          <div>
-            <p class="eyebrow">Measurement</p>
-            <h2 class="section-title reveal-up">
-              Mỗi giai đoạn có một chỉ số thắng riêng.
-            </h2>
-          </div>
-          <div class="bar-chart reveal-card">
-            <div>
-              <span>Awaken Reach</span><i style="--w: 92%"></i><b>2M</b>
-            </div>
-            <div>
-              <span>Quiz Completion</span><i style="--w: 72%"></i><b>45%</b>
-            </div>
-            <div>
-              <span>Lead Quality</span><i style="--w: 80%"></i><b>8K</b>
-            </div>
-            <div>
-              <span>Trial Attendance</span><i style="--w: 64%"></i><b>1.2K</b>
-            </div>
-            <div><span>Enrollment</span><i style="--w: 86%"></i><b>3K</b></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="timeline" class="slide">
-        <div class="slide-inner">
-          <p class="eyebrow">Rollout Timeline</p>
-          <h2 class="section-title reveal-up">
-            8 tuần đi từ tiếng vang đến doanh thu lớp học.
-          </h2>
-          <div class="timeline">
-            <div class="timeline-node reveal-card">
-              <b>W1-W2</b
-              ><span>Tease FOMO score, KOL seeding, landing quiz.</span>
-            </div>
-            <div class="timeline-node reveal-card">
-              <b>W3-W5</b
-              ><span>Challenge 7 ngày, livestream clinic, retargeting.</span>
-            </div>
-            <div class="timeline-node reveal-card">
-              <b>W6-W7</b
-              ><span
-                >Offline open class, referral squad, counselor follow-up.</span
-              >
-            </div>
-            <div class="timeline-node reveal-card">
-              <b>W8</b
-              ><span>Showcase kết quả, chốt lớp, publish proof pack.</span>
-            </div>
           </div>
         </div>
       </section>
@@ -904,7 +1241,7 @@
               class="lucide-eyebrow"
               aria-hidden="true"
             ></i>
-            The Close
+            Kết
           </p>
           <h2 class="closing-title split-words">
             FOMO kéo họ dừng lại. PRO khiến họ đăng ký.

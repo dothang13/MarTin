@@ -58,9 +58,12 @@
     const panel = radarCanvas?.closest(".compete-panel");
     const viewRadar = document.querySelector('[data-chart-view="radar"]');
     const viewBar = document.querySelector('[data-chart-view="bar"]');
+    const scatterCanvas = document.getElementById("competitorScatter");
+    const viewScatter = document.querySelector('[data-chart-view="scatter"]');
     const tabs = document.querySelectorAll(".chart-tab");
 
-    if (!radarCanvas || !barCanvas || !toggleRoot || !panel || !window.Chart) return;
+    if (!radarCanvas || !barCanvas || !scatterCanvas || !toggleRoot || !panel || !window.Chart || !viewRadar || !viewBar || !viewScatter)
+      return;
 
     const labels = [
       "Công nghệ EdTech",
@@ -164,6 +167,7 @@
 
     let radarChart;
     let barChart;
+    let scatterChart;
 
     const anim = { duration: printMode ? 0 : 1400, easing: "easeOutQuart" };
 
@@ -199,6 +203,110 @@
             },
           },
           plugins: commonPlugins,
+        },
+      });
+    };
+
+    const scatterDatasets = [
+      {
+        label: "AOEC",
+        data: [{ x: 46, y: 93 }],
+        accent: "#ff4d6d",
+        pointRadius: 10,
+      },
+      {
+        label: "ThanhMaiHSK",
+        data: [{ x: 22, y: 76 }],
+        accent: "#22d3ee",
+        pointRadius: 8,
+      },
+      {
+        label: "Pengyou",
+        data: [{ x: 78, y: 54 }],
+        accent: "#fbbf24",
+        pointRadius: 8,
+      },
+      {
+        label: "Khánh Vân",
+        data: [{ x: 30, y: 58 }],
+        accent: "#a855f7",
+        pointRadius: 8,
+      },
+    ].map((d) => ({
+      label: d.label,
+      data: d.data,
+      backgroundColor: d.accent,
+      borderColor: "#0e0e0f",
+      borderWidth: 2,
+      pointRadius: d.pointRadius,
+      pointHoverRadius: d.pointRadius + 3,
+    }));
+
+    const createScatter = () => {
+      if (scatterChart) return;
+      scatterChart = new Chart(scatterCanvas.getContext("2d"), {
+        type: "scatter",
+        data: { datasets: scatterDatasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: anim,
+          scales: {
+            x: {
+              min: 0,
+              max: 100,
+              grid: { color: "rgba(255,255,255,0.08)" },
+              ticks: {
+                display: false,
+                color: "rgba(255,255,255,0.65)",
+              },
+              title: {
+                display: true,
+                text: "◄ Học thuật / luyện đề truyền thống — Tiếp cận viral & giải trí MXH ►",
+                color: "rgba(255,255,255,0.75)",
+                font: { family: "Muli", size: 11, weight: "700" },
+                padding: { top: 6, bottom: 0 },
+              },
+            },
+            y: {
+              min: 0,
+              max: 100,
+              grid: { color: "rgba(255,255,255,0.08)" },
+              ticks: {
+                display: false,
+                color: "rgba(255,255,255,0.65)",
+              },
+              title: {
+                display: true,
+                text: "Thực chiến · phản xạ · đầu ra ◄————————————————► Ít nhấn mạnh cam kết thực tế",
+                color: "rgba(255,255,255,0.75)",
+                font: { family: "Muli", size: 11, weight: "700" },
+                padding: { bottom: 6 },
+              },
+            },
+          },
+          plugins: {
+            ...commonPlugins,
+            legend: {
+              display: true,
+              labels: {
+                color: "rgba(255,255,255,0.86)",
+                font: { family: "Muli", size: 11, weight: "700" },
+                boxWidth: 10,
+              },
+              position: "bottom",
+            },
+            tooltip: {
+              ...commonPlugins.tooltip,
+              callbacks: {
+                label(ctx) {
+                  const { datasetIndex, parsed } = ctx;
+                  const name = scatterDatasets[datasetIndex].label;
+                  return ` ${name}: định vị (x:${Math.round(parsed.x)}, y:${Math.round(parsed.y)})`;
+                },
+              },
+            },
+          },
         },
       });
     };
@@ -268,19 +376,30 @@
     };
 
     const setMode = (mode) => {
-      const isBar = mode === "bar";
+      const showRadar = mode === "radar";
+      const showBar = mode === "bar";
+      const showScatter = mode === "scatter";
+      viewRadar.hidden = !showRadar;
+      viewBar.hidden = !showBar;
+      viewScatter.hidden = !showScatter;
+      toggleRoot.style.display = showScatter ? "none" : "flex";
+
       createRadar();
-      viewRadar.hidden = isBar;
-      viewBar.hidden = !isBar;
+
       tabs.forEach((t) => {
         const active = t.dataset.chartMode === mode;
         t.classList.toggle("is-active", active);
         t.setAttribute("aria-selected", active ? "true" : "false");
       });
+
       requestAnimationFrame(() => {
-        if (isBar) {
+        if (showBar) {
           createBar();
           barChart?.resize();
+        }
+        if (showScatter) {
+          createScatter();
+          scatterChart?.resize();
         }
         radarChart?.resize();
       });
@@ -380,8 +499,8 @@
       });
     });
 
-    gsap.to(".hero-mascot", {
-      y: -36,
+    gsap.to(".hero-mascot-wrap .hero-mascot", {
+      y: -28,
       rotate: -3,
       ease: "sine.inOut",
       repeat: -1,
@@ -389,13 +508,16 @@
       duration: 3.8,
     });
 
-    gsap.to(".bar-chart i", {
-      width: (i, el) => el.style.getPropertyValue("--w"),
-      duration: 1.2,
-      ease: "power3.out",
-      stagger: 0.12,
-      scrollTrigger: { trigger: ".bar-chart", start: "top 78%", once: true },
-    });
+    const barChartRoot = document.querySelector(".bar-chart");
+    if (barChartRoot) {
+      gsap.to(".bar-chart i", {
+        width: (i, el) => el.style.getPropertyValue("--w"),
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.12,
+        scrollTrigger: { trigger: barChartRoot, start: "top 78%", once: true },
+      });
+    }
 
     runCounters();
     initCompetitiveCharts();
@@ -419,10 +541,66 @@
     }
   };
 
+  const initDeckNavActive = () => {
+    const nav = document.querySelector(".deck-nav");
+    const deck = document.getElementById("deck");
+    if (!nav || !deck || printMode) return;
+
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const hrefSet = new Set(links.map((a) => a.getAttribute("href")));
+    const sections = [...deck.querySelectorAll(":scope > section[id]")].filter((s) =>
+      hrefSet.has(`#${s.id}`)
+    );
+    if (!sections.length) return;
+
+    const markerY = () => window.innerHeight * 0.36;
+
+    const apply = () => {
+      const marker = markerY();
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const docBottom = document.documentElement.scrollHeight;
+      const nearBottom = scrollBottom >= docBottom - 6;
+
+      let current = sections[0];
+      if (nearBottom) {
+        current = sections[sections.length - 1];
+      } else {
+        for (const sec of sections) {
+          const top = sec.getBoundingClientRect().top;
+          if (top <= marker) current = sec;
+          else break;
+        }
+      }
+
+      const href = `#${current.id}`;
+      links.forEach((a) => {
+        const on = a.getAttribute("href") === href;
+        a.classList.toggle("is-active", on);
+        if (on) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    };
+
+    let ticking = false;
+    const schedule = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        apply();
+      });
+    };
+
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    schedule();
+  };
+
   window.addEventListener("DOMContentLoaded", () => {
     initLucideIcons();
     initParticles();
     initAnimations();
+    initDeckNavActive();
     initTilt();
 
     if (printMode) {
