@@ -6,7 +6,10 @@
     <title><%= title %></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -27,7 +30,9 @@
     </script>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="font-muli bg-carbon text-white antialiased <%= printMode ? 'print-route' : '' %>">
+  <body
+    class="font-muli bg-carbon text-white antialiased <%= printMode ? 'print-route' : '' %>"
+  >
     <div class="progress-bar" aria-hidden="true"></div>
     <nav class="deck-nav" aria-label="Điều hướng slide">
       <a href="#hero">01</a>
@@ -48,21 +53,44 @@
     <main id="deck">
       <section id="hero" class="slide hero-slide overflow-hidden">
         <div class="slide-deco slide-deco--hero" aria-hidden="true">
-          <img src="/img/deco-stars.svg" alt="" class="deco-img deco-img--stars" />
-          <img src="/img/deco-wave.svg" alt="" class="deco-img deco-img--wave" />
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--stars"
+          />
+          <img
+            src="/img/deco-wave.svg"
+            alt=""
+            class="deco-img deco-img--wave"
+          />
         </div>
         <div id="particles-js" class="absolute inset-0"></div>
         <div class="forge-grid"></div>
-        <img class="martin hero-mascot" src="/assets/martin.png" alt="MarTin mascot" />
+        <img
+          class="martin hero-mascot"
+          src="/assets/martin.png"
+          alt="MarTin mascot"
+        />
         <div class="slide-inner hero-inner">
           <div class="hero-brand-row">
-            <img class="hero-brand-logo" src="/assets/easy-chinese-white.png" alt="Easy Chinese AOEC" width="200" height="72" decoding="async" />
+            <img
+              class="hero-brand-logo"
+              src="/assets/easy-chinese-white.png"
+              alt="Easy Chinese AOEC"
+              width="300"
+              height="108"
+              decoding="async"
+            />
           </div>
           <p class="eyebrow">AOEC Marketing Battle 2026</p>
           <p class="hero-campaign-label reveal-up">Chiến dịch IMC · Big Idea</p>
           <h1 class="hero-title split-words">FOMO to PRO</h1>
-          <p class="hero-tagline-vn reveal-up">HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện — biến chứng chỉ thành năng lực nói, dịch và thuyết phục nhà tuyển dụng FDI.</p>
-          <p class="hero-copy reveal-up">Đừng để FOMO dẫn dắt, hãy để AOEC giúp bạn dẫn đầu.</p>
+          <p class="hero-tagline-vn reveal-up">
+            HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện
+          </p>
+          <p class="hero-copy reveal-up">
+            Đừng để FOMO dẫn dắt, hãy để AOEC giúp bạn dẫn đầu.
+          </p>
           <div class="hero-badges reveal-up">
             <span>Forge The Core</span>
             <span>Micro-size Learning</span>
@@ -73,32 +101,65 @@
 
       <section id="summary" class="slide">
         <div class="slide-deco slide-deco--summary" aria-hidden="true">
-          <img src="/img/deco-path.svg" alt="" class="deco-img deco-img--path-soft" />
+          <img
+            src="/img/deco-path.svg"
+            alt=""
+            class="deco-img deco-img--path-soft"
+          />
         </div>
         <div class="slide-inner">
-          <p class="eyebrow eyebrow-with-icon"><i data-lucide="sparkles" class="lucide-eyebrow" aria-hidden="true"></i> Executive Summary</p>
-          <h2 class="section-title reveal-up">Mục tiêu không chỉ là tạo tiếng vang. Mục tiêu là biến chú ý thành lớp học.</h2>
+          <p class="eyebrow eyebrow-with-icon">
+            <i
+              data-lucide="sparkles"
+              class="lucide-eyebrow"
+              aria-hidden="true"
+            ></i>
+            Executive Summary
+          </p>
+          <h2 class="section-title reveal-up">
+            Mục tiêu không chỉ là tạo tiếng vang. Mục tiêu là biến chú ý thành
+            lớp học.
+          </h2>
           <div class="summary-grid">
             <article class="glass-card metric-card reveal-card">
-              <i data-lucide="radio" class="lucide-card-icon" aria-hidden="true"></i>
+              <i
+                data-lucide="radio"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
               <span class="metric-number" data-count="2000000">0</span>
               <span class="metric-label">Reach toàn chiến dịch</span>
             </article>
             <article class="glass-card metric-card reveal-card">
-              <i data-lucide="users-round" class="lucide-card-icon" aria-hidden="true"></i>
+              <i
+                data-lucide="users-round"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
               <span class="metric-number" data-count="8000">0</span>
               <span class="metric-label">Leads chất lượng</span>
             </article>
             <article class="glass-card metric-card reveal-card">
-              <i data-lucide="badge-check" class="lucide-card-icon" aria-hidden="true"></i>
+              <i
+                data-lucide="badge-check"
+                class="lucide-card-icon"
+                aria-hidden="true"
+              ></i>
               <span class="metric-number" data-count="3000">0</span>
               <span class="metric-label">Học viên chuyển đổi</span>
             </article>
           </div>
           <div class="glass-card summary-copy reveal-up">
-            <strong class="insight-heading">Insight lõi (tiếng nói học viên):</strong>
+            <strong class="insight-heading"
+              >Insight lõi (tiếng nói học viên):</strong
+            >
             <p class="insight-quote">
-              Tôi ám ảnh với việc thua kém bạn bè trên LinkedIn, nhưng tôi càng sợ hơn việc bỏ tiền mua một tấm &ldquo;bằng rỗng&rdquo; để rồi câm nín khi đi phỏng vấn. Tôi cần một bệ phóng khắc nghiệt, &ldquo;ép&rdquo; tôi phải giao tiếp và dịch thuật được ngay lập tức, biến tấm bằng HSK 3.0 thành vũ khí thực chiến giúp tôi tự tin &ldquo;chốt deal&rdquo; với doanh nghiệp FDI.
+              Tôi ám ảnh với việc thua kém bạn bè trên LinkedIn, nhưng tôi càng
+              sợ hơn việc bỏ tiền mua một tấm &ldquo;bằng rỗng&rdquo; để rồi câm
+              nín khi đi phỏng vấn. Tôi cần một bệ phóng khắc nghiệt,
+              &ldquo;ép&rdquo; tôi phải giao tiếp và dịch thuật được ngay lập
+              tức, biến tấm bằng HSK 3.0 thành vũ khí thực chiến giúp tôi tự tin
+              &ldquo;chốt deal&rdquo; với doanh nghiệp FDI.
             </p>
           </div>
         </div>
@@ -106,114 +167,370 @@
 
       <section id="radar" class="slide">
         <div class="slide-deco slide-deco--radar" aria-hidden="true">
-          <img src="/img/deco-stars.svg" alt="" class="deco-img deco-img--radar-burst" />
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--radar-burst"
+          />
         </div>
         <div class="slide-inner radar-layout">
           <div>
-            <p class="eyebrow eyebrow-with-icon"><i data-lucide="radar" class="lucide-eyebrow" aria-hidden="true"></i> Competitive Radar</p>
-            <h2 class="section-title reveal-up">Bản Đồ Năng Lực Cạnh Tranh Đà Nẵng 2026</h2>
-            <p class="body-copy reveal-up">AOEC được đặt ở vùng mạnh nhờ phối hợp EdTech, lớp micro-size, học phí tối ưu, lộ trình HSK 3.0 thực chiến và cơ chế cam kết rõ ràng.</p>
-            <p class="chart-legend-hint reveal-up">Chọn <strong>Radar</strong> để so khối toàn diện, hoặc <strong>Cột so sánh</strong> để đọc điểm từng tiêu chí. Nhấn từng thương hiệu để ẩn/hiện trên đồ thị.</p>
+            <p class="eyebrow eyebrow-with-icon">
+              <i
+                data-lucide="radar"
+                class="lucide-eyebrow"
+                aria-hidden="true"
+              ></i>
+              Competitive Radar
+            </p>
+            <h2 class="section-title reveal-up">
+              Bản Đồ Năng Lực Cạnh Tranh Đà Nẵng 2026
+            </h2>
+            <p class="body-copy reveal-up">
+              AOEC được đặt ở vùng mạnh nhờ phối hợp EdTech, lớp micro-size, học
+              phí tối ưu, lộ trình HSK 3.0 thực chiến và cơ chế cam kết rõ ràng.
+            </p>
+            <p class="chart-legend-hint reveal-up">
+              Chọn <strong>Radar</strong> để so khối toàn diện, hoặc
+              <strong>Cột so sánh</strong> để đọc điểm từng tiêu chí. Nhấn từng
+              thương hiệu để ẩn/hiện trên đồ thị.
+            </p>
           </div>
           <div class="compete-panel reveal-card">
             <div class="chart-toolbar" role="tablist" aria-label="Kiểu biểu đồ">
-              <button type="button" class="chart-tab is-active" data-chart-mode="radar" role="tab" aria-selected="true">Radar</button>
-              <button type="button" class="chart-tab" data-chart-mode="bar" role="tab" aria-selected="false">Cột so sánh</button>
+              <button
+                type="button"
+                class="chart-tab is-active"
+                data-chart-mode="radar"
+                role="tab"
+                aria-selected="true"
+              >
+                Radar
+              </button>
+              <button
+                type="button"
+                class="chart-tab"
+                data-chart-mode="bar"
+                role="tab"
+                aria-selected="false"
+              >
+                Cột so sánh
+              </button>
             </div>
             <div class="chart-canvas-stack">
               <div class="chart-view is-active" data-chart-view="radar">
-                <canvas id="competitorRadar" aria-label="Biểu đồ radar so sánh AOEC với đối thủ"></canvas>
+                <canvas
+                  id="competitorRadar"
+                  aria-label="Biểu đồ radar so sánh AOEC với đối thủ"
+                ></canvas>
               </div>
               <div class="chart-view" data-chart-view="bar" hidden>
-                <canvas id="competitorBar" aria-label="Biểu đồ cột so sánh điểm theo tiêu chí"></canvas>
+                <canvas
+                  id="competitorBar"
+                  aria-label="Biểu đồ cột so sánh điểm theo tiêu chí"
+                ></canvas>
               </div>
             </div>
-            <div class="dataset-toggles" id="datasetToggles" aria-label="Bật tắt từng đối thủ"></div>
+            <div
+              class="dataset-toggles"
+              id="datasetToggles"
+              aria-label="Bật tắt từng đối thủ"
+            ></div>
           </div>
         </div>
       </section>
 
       <section id="funnel" class="slide">
         <div class="slide-inner">
-          <p class="eyebrow eyebrow-with-icon"><i data-lucide="rocket" class="lucide-eyebrow" aria-hidden="true"></i> Growth Hacking Funnel</p>
-          <h2 class="section-title reveal-up">Ba nhịp tăng trưởng — từ cảnh tỉnh đến chốt sales.</h2>
-          <p class="body-copy reveal-up">Đúng lộ trình IMC trong đề bài: <strong>Awaken</strong> giáng đòn “bằng rỗng”, <strong>Thunder</strong> thu lead bằng gamification &amp; AI, <strong>Glint</strong> chốt bằng cam kết thép và minh chứng offline.</p>
+          <p class="eyebrow eyebrow-with-icon">
+            <i
+              data-lucide="rocket"
+              class="lucide-eyebrow"
+              aria-hidden="true"
+            ></i>
+            Growth Hacking Funnel
+          </p>
+          <h2 class="section-title reveal-up">
+            Ba nhịp tăng trưởng — từ cảnh tỉnh đến chốt sales.
+          </h2>
+          <p class="body-copy reveal-up">
+            Đúng lộ trình IMC trong đề bài: <strong>Awaken</strong> giáng đòn
+            “bằng rỗng”, <strong>Thunder</strong> thu lead bằng gamification
+            &amp; AI, <strong>Glint</strong> chốt bằng cam kết thép và minh
+            chứng offline.
+          </p>
           <div class="funnel-pipeline">
             <article class="pipeline-card tilt-card reveal-card" data-tilt>
               <span class="pipeline-step">Nhịp 01</span>
-              <h3 class="pipeline-title"><i data-lucide="sunrise" class="lucide-inline" aria-hidden="true"></i> Awaken</h3>
-              <p>Đánh thức FOMO &amp; LinkedIn envy; OOH + phim ngắn cảnh tỉnh về học vẹt / chứng chỉ không dùng được.</p>
+              <h3 class="pipeline-title">
+                <i
+                  data-lucide="sunrise"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Awaken
+              </h3>
+              <p>
+                Đánh thức FOMO &amp; LinkedIn envy; OOH + phim ngắn cảnh tỉnh về
+                học vẹt / chứng chỉ không dùng được.
+              </p>
               <a class="pipeline-link" href="#phase-awaken">Chi tiết →</a>
             </article>
             <span class="pipeline-arrow" aria-hidden="true"></span>
             <article class="pipeline-card tilt-card reveal-card" data-tilt>
               <span class="pipeline-step">Nhịp 02</span>
-              <h3 class="pipeline-title"><i data-lucide="zap" class="lucide-inline" aria-hidden="true"></i> Thunder</h3>
-              <p>Thu thập lead chất lượng: thử thách, quiz AI, livestream clinic — chi phí tiệm cận 0 đồng / lead.</p>
+              <h3 class="pipeline-title">
+                <i
+                  data-lucide="zap"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Thunder
+              </h3>
+              <p>
+                Thu thập lead chất lượng: thử thách, quiz AI, livestream clinic
+                — chi phí tiệm cận 0 đồng / lead.
+              </p>
               <a class="pipeline-link" href="#phase-thunder">Chi tiết →</a>
             </article>
             <span class="pipeline-arrow" aria-hidden="true"></span>
             <article class="pipeline-card tilt-card reveal-card" data-tilt>
               <span class="pipeline-step">Nhịp 03</span>
-              <h3 class="pipeline-title"><i data-lucide="gem" class="lucide-inline" aria-hidden="true"></i> Glint</h3>
-              <p>Chuyển đổi: open class, “hợp đồng thép” đảo ngược rủi ro, counselor chốt lớp theo nhóm.</p>
+              <h3 class="pipeline-title">
+                <i
+                  data-lucide="gem"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Glint
+              </h3>
+              <p>
+                Chuyển đổi: open class, “hợp đồng thép” đảo ngược rủi ro,
+                counselor chốt lớp theo nhóm.
+              </p>
               <a class="pipeline-link" href="#phase-glint">Chi tiết →</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="phase-awaken" class="slide phase-detail-slide">
+      <section
+        id="phase-awaken"
+        class="slide phase-detail-slide phase-detail-slide--awaken"
+      >
+        <div
+          class="slide-deco slide-deco--phase phase-deco--awaken"
+          aria-hidden="true"
+        >
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--phase-awaken-stars"
+          />
+          <img
+            src="/img/deco-path.svg"
+            alt=""
+            class="deco-img deco-img--phase-awaken-path"
+          />
+        </div>
+        <div
+          class="phase-ambient phase-ambient--awaken"
+          aria-hidden="true"
+        ></div>
+        <span class="phase-watermark" aria-hidden="true">01</span>
         <div class="slide-inner phase-detail-inner">
-          <p class="eyebrow">Nhịp 01 · Awaken</p>
-          <h2 class="section-title reveal-up">Cảnh tỉnh: FOMO không đủ, cần thấy rủi ro “bằng rỗng”.</h2>
+          <header class="phase-detail-header">
+            <div class="phase-hero-strip reveal-up">
+              <span class="phase-hero-num">01</span>
+              <span class="phase-hero-icon" aria-hidden="true"
+                ><i data-lucide="sunrise"></i
+              ></span>
+              <div class="phase-hero-meta">
+                <p class="eyebrow eyebrow-with-icon">
+                  <i
+                    data-lucide="sunrise"
+                    class="lucide-eyebrow"
+                    aria-hidden="true"
+                  ></i>
+                  Nhịp 01 · Awaken
+                </p>
+                <p class="phase-hero-tagline">
+                  Cảnh tỉnh · OOH &amp; drama ngắn
+                </p>
+              </div>
+            </div>
+            <h2 class="section-title reveal-up">
+              Cảnh tỉnh: FOMO không đủ, cần thấy rủi ro “bằng rỗng”.
+            </h2>
+            <p class="phase-hook-banner phase-hook-banner--awaken reveal-up">
+              <span class="phase-hook-label">Hook</span> “Bạn đang tụt bao nhiêu
+              level?” — kéo về lời giải AOEC.
+            </p>
+          </header>
           <div class="phase-detail-grid">
-            <div class="phase-detail-block reveal-card">
-              <h3>Mục tiêu</h3>
+            <div
+              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
+              data-tilt
+            >
+              <div class="phase-block-head">
+                <i
+                  data-lucide="target"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Mục tiêu</h3>
+              </div>
               <ul>
-                <li>Nhận diện nỗi sợ thua trên LinkedIn / MXH và nỗi sợ đầu tư chứng chỉ vô dụng khi phỏng vấn.</li>
-                <li>Dựng frame: HSK 3.0 bắt buộc Nói + Dịch — học vẹt = điểm rơi thực tế.</li>
+                <li>
+                  Nhận diện nỗi sợ thua trên LinkedIn / MXH và nỗi sợ đầu tư
+                  chứng chỉ vô dụng khi phỏng vấn.
+                </li>
+                <li>
+                  Dựng frame: HSK 3.0 bắt buộc Nói + Dịch — học vẹt = điểm rơi
+                  thực tế.
+                </li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Kênh &amp; chạm</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="radio"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Kênh &amp; chạm</h3>
+              </div>
               <ul>
-                <li>OOH (MarTin xuống phố), phim ngắn drama học đường / đi phỏng vấn.</li>
-                <li>Short video, meme học thuật, quiz “bạn đang tụt bao nhiêu level?”</li>
+                <li>
+                  OOH (MarTin xuống phố), phim ngắn drama học đường / đi phỏng
+                  vấn.
+                </li>
+                <li>
+                  Short video, meme học thuật, quiz “bạn đang tụt bao nhiêu
+                  level?”
+                </li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Chỉ số &amp; hook</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="activity"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Chỉ số &amp; hook</h3>
+              </div>
               <ul>
                 <li>Reach, completion video, lượt làm quiz.</li>
-                <li><strong>Hook:</strong> “Bạn đang tụt bao nhiêu level?” — dẫn về lời giải AOEC.</li>
+                <li>
+                  <strong>Hook:</strong> “Bạn đang tụt bao nhiêu level?” — dẫn
+                  về lời giải AOEC.
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="phase-thunder" class="slide phase-detail-slide">
+      <section
+        id="phase-thunder"
+        class="slide phase-detail-slide phase-detail-slide--thunder"
+      >
+        <div
+          class="slide-deco slide-deco--phase phase-deco--thunder"
+          aria-hidden="true"
+        >
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--phase-thunder-burst"
+          />
+          <img
+            src="/img/deco-wave.svg"
+            alt=""
+            class="deco-img deco-img--phase-thunder-wave"
+          />
+        </div>
+        <div
+          class="phase-ambient phase-ambient--thunder"
+          aria-hidden="true"
+        ></div>
+        <span class="phase-watermark" aria-hidden="true">02</span>
         <div class="slide-inner phase-detail-inner">
-          <p class="eyebrow">Nhịp 02 · Thunder</p>
-          <h2 class="section-title reveal-up">Kích hoạt: lead phải “chơi” tiếng Trung, không chỉ xem.</h2>
+          <header class="phase-detail-header">
+            <div class="phase-hero-strip reveal-up">
+              <span class="phase-hero-num">02</span>
+              <span class="phase-hero-icon" aria-hidden="true"
+                ><i data-lucide="zap"></i
+              ></span>
+              <div class="phase-hero-meta">
+                <p class="eyebrow eyebrow-with-icon">
+                  <i
+                    data-lucide="zap"
+                    class="lucide-eyebrow"
+                    aria-hidden="true"
+                  ></i>
+                  Nhịp 02 · Thunder
+                </p>
+                <p class="phase-hero-tagline">
+                  Gamification · AI quiz · Live clinic
+                </p>
+              </div>
+            </div>
+            <h2 class="section-title reveal-up">
+              Kích hoạt: lead phải “chơi” tiếng Trung, không chỉ xem.
+            </h2>
+            <p class="phase-hook-banner phase-hook-banner--thunder reveal-up">
+              <span class="phase-hook-label">Hook</span> “7 ngày thoát học vẹt.”
+            </p>
+          </header>
           <div class="phase-detail-grid">
-            <div class="phase-detail-block reveal-card">
-              <h3>Mục tiêu</h3>
+            <div
+              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
+              data-tilt
+            >
+              <div class="phase-block-head">
+                <i
+                  data-lucide="target"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Mục tiêu</h3>
+              </div>
               <ul>
-                <li>Thu <strong>8.000 leads</strong> chất lượng với chi phí / lead thấp nhờ gamification &amp; AI.</li>
+                <li>
+                  Thu <strong>8.000 leads</strong> chất lượng với chi phí / lead
+                  thấp nhờ gamification &amp; AI.
+                </li>
                 <li>Ép lộ lỗ hổng nghe — nói — dịch để tư vấn có dữ liệu.</li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Kênh &amp; chạm</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="gamepad-2"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Kênh &amp; chạm</h3>
+              </div>
               <ul>
                 <li>Thử thách 7 ngày, leaderboard, voucher học thử.</li>
-                <li>Livestream clinic sửa phát âm, mini-test sau mỗi buổi, retargeting theo hành vi quiz.</li>
+                <li>
+                  Livestream clinic sửa phát âm, mini-test sau mỗi buổi,
+                  retargeting theo hành vi quiz.
+                </li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Chỉ số &amp; hook</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="activity"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Chỉ số &amp; hook</h3>
+              </div>
               <ul>
                 <li>Tỷ lệ hoàn thành thử thách, CPL, số booking học thử.</li>
                 <li><strong>Hook:</strong> “7 ngày thoát học vẹt.”</li>
@@ -223,27 +540,112 @@
         </div>
       </section>
 
-      <section id="phase-glint" class="slide phase-detail-slide">
+      <section
+        id="phase-glint"
+        class="slide phase-detail-slide phase-detail-slide--glint"
+      >
+        <div
+          class="slide-deco slide-deco--phase phase-deco--glint"
+          aria-hidden="true"
+        >
+          <img
+            src="/img/deco-path.svg"
+            alt=""
+            class="deco-img deco-img--phase-glint-path"
+          />
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--phase-glint-spark"
+          />
+        </div>
+        <div
+          class="phase-ambient phase-ambient--glint"
+          aria-hidden="true"
+        ></div>
+        <span class="phase-watermark" aria-hidden="true">03</span>
         <div class="slide-inner phase-detail-inner">
-          <p class="eyebrow">Nhịp 03 · Glint</p>
-          <h2 class="section-title reveal-up">Chốt niềm tin: thấy lớp, thấy tiến bộ, thấy văn bản cam kết.</h2>
+          <header class="phase-detail-header">
+            <div class="phase-hero-strip reveal-up">
+              <span class="phase-hero-num">03</span>
+              <span class="phase-hero-icon" aria-hidden="true"
+                ><i data-lucide="gem"></i
+              ></span>
+              <div class="phase-hero-meta">
+                <p class="eyebrow eyebrow-with-icon">
+                  <i
+                    data-lucide="gem"
+                    class="lucide-eyebrow"
+                    aria-hidden="true"
+                  ></i>
+                  Nhịp 03 · Glint
+                </p>
+                <p class="phase-hero-tagline">
+                  Open class · “Hợp đồng thép” · Proof
+                </p>
+              </div>
+            </div>
+            <h2 class="section-title reveal-up">
+              Chốt niềm tin: thấy lớp, thấy tiến bộ, thấy văn bản cam kết.
+            </h2>
+            <p class="phase-hook-banner phase-hook-banner--glint reveal-up">
+              <span class="phase-hook-label">Hook</span> “Đến lớp là thấy mình
+              tiến bộ.”
+            </p>
+          </header>
           <div class="phase-detail-grid">
-            <div class="phase-detail-block reveal-card">
-              <h3>Mục tiêu</h3>
+            <div
+              class="phase-detail-block phase-detail-block--accent tilt-card reveal-card"
+              data-tilt
+            >
+              <div class="phase-block-head">
+                <i
+                  data-lucide="target"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Mục tiêu</h3>
+              </div>
               <ul>
-                <li>Chuyển lead thành <strong>3.000 học viên</strong> qua minh chứng trực diện và giảm rủi ro cảm nhận.</li>
-                <li>Biến “đã thử” thành “đã ký” bằng social proof và điều khoản rõ ràng.</li>
+                <li>
+                  Chuyển lead thành <strong>3.000 học viên</strong> qua minh
+                  chứng trực diện và giảm rủi ro cảm nhận.
+                </li>
+                <li>
+                  Biến “đã thử” thành “đã ký” bằng social proof và điều khoản rõ
+                  ràng.
+                </li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Kênh &amp; chạm</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="handshake"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Kênh &amp; chạm</h3>
+              </div>
               <ul>
-                <li>Open class offline, review thật từ học viên, counselor theo nhóm bạn học.</li>
-                <li>“Hợp đồng thép” / chính sách đảo ngược rủi ro (cam kết đầu ra, quy trình hoàn học phí minh bạch).</li>
+                <li>
+                  Open class offline, review thật từ học viên, counselor theo
+                  nhóm bạn học.
+                </li>
+                <li>
+                  “Hợp đồng thép” / chính sách đảo ngược rủi ro (cam kết đầu ra,
+                  quy trình hoàn học phí minh bạch).
+                </li>
               </ul>
             </div>
-            <div class="phase-detail-block reveal-card">
-              <h3>Chỉ số &amp; hook</h3>
+            <div class="phase-detail-block tilt-card reveal-card" data-tilt>
+              <div class="phase-block-head">
+                <i
+                  data-lucide="activity"
+                  class="lucide-phase-block"
+                  aria-hidden="true"
+                ></i>
+                <h3>Chỉ số &amp; hook</h3>
+              </div>
               <ul>
                 <li>Trial attendance, tỷ lệ deposit, NPS sau buổi đầu.</li>
                 <li><strong>Hook:</strong> “Đến lớp là thấy mình tiến bộ.”</li>
@@ -257,33 +659,85 @@
         <div class="slide-inner two-col">
           <div>
             <p class="eyebrow">Audience Tension</p>
-            <h2 class="section-title reveal-up">Từ áp lực trực tuyến đến hành động trực diện.</h2>
-            <p class="body-copy reveal-up">Chiến dịch không phủ nhận FOMO. Nó chuyển hóa FOMO thành một lời mời có cấu trúc: kiểm tra hiện trạng, luyện một kỹ năng nhỏ, nhận phản hồi ngay, rồi bước vào lớp thật.</p>
+            <h2 class="section-title reveal-up">
+              Từ áp lực trực tuyến đến hành động trực diện.
+            </h2>
+            <p class="body-copy reveal-up">
+              Chiến dịch không phủ nhận FOMO. Nó chuyển hóa FOMO thành một lời
+              mời có cấu trúc: kiểm tra hiện trạng, luyện một kỹ năng nhỏ, nhận
+              phản hồi ngay, rồi bước vào lớp thật.
+            </p>
           </div>
           <div class="tension-stack">
-            <div class="tension-item reveal-card"><span class="tension-label"><i data-lucide="flame" class="lucide-tension" aria-hidden="true"></i> FOMO</span><p>Sợ thua bạn bè, chậm chứng chỉ, mất cơ hội.</p></div>
-            <div class="tension-item reveal-card"><span class="tension-label"><i data-lucide="shield-off" class="lucide-tension" aria-hidden="true"></i> Friction</span><p>Sợ lớp đông, ngại phát âm, học online dễ bỏ cuộc.</p></div>
-            <div class="tension-item reveal-card"><span class="tension-label"><i data-lucide="eye" class="lucide-tension" aria-hidden="true"></i> Proof</span><p>Muốn thấy tiến bộ cụ thể trước khi đóng học phí.</p></div>
+            <div class="tension-item reveal-card">
+              <span class="tension-label"
+                ><i
+                  data-lucide="flame"
+                  class="lucide-tension"
+                  aria-hidden="true"
+                ></i>
+                FOMO</span
+              >
+              <p>Sợ thua bạn bè, chậm chứng chỉ, mất cơ hội.</p>
+            </div>
+            <div class="tension-item reveal-card">
+              <span class="tension-label"
+                ><i
+                  data-lucide="shield-off"
+                  class="lucide-tension"
+                  aria-hidden="true"
+                ></i>
+                Friction</span
+              >
+              <p>Sợ lớp đông, ngại phát âm, học online dễ bỏ cuộc.</p>
+            </div>
+            <div class="tension-item reveal-card">
+              <span class="tension-label"
+                ><i
+                  data-lucide="eye"
+                  class="lucide-tension"
+                  aria-hidden="true"
+                ></i>
+                Proof</span
+              >
+              <p>Muốn thấy tiến bộ cụ thể trước khi đóng học phí.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="bigidea" class="slide">
         <div class="slide-deco slide-deco--bigidea" aria-hidden="true">
-          <img src="/img/deco-wave.svg" alt="" class="deco-img deco-img--wave-soft" />
+          <img
+            src="/img/deco-wave.svg"
+            alt=""
+            class="deco-img deco-img--wave-soft"
+          />
         </div>
         <div class="slide-inner big-idea">
-          <p class="eyebrow eyebrow-with-icon"><i data-lucide="lightbulb" class="lucide-eyebrow" aria-hidden="true"></i> Tái định vị thương hiệu &amp; Big Idea</p>
+          <p class="eyebrow eyebrow-with-icon">
+            <i
+              data-lucide="lightbulb"
+              class="lucide-eyebrow"
+              aria-hidden="true"
+            ></i>
+            Tái định vị thương hiệu &amp; Big Idea
+          </p>
           <p class="big-idea-label reveal-up">BIG IDEA</p>
           <h2 class="fomo-pro-headline reveal-up">FOMO to PRO</h2>
           <p class="big-idea-vn-explain reveal-up">
             <span class="vn-explain-lead">Ý nghĩa bằng tiếng Việt:</span>
-            <strong>HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện</strong>
-            — không còn học vì sợ tụt hậu trên mạng, mà luyện để thể hiện được ngay trước nhà tuyển dụng và doanh nghiệp FDI.
+            <strong
+              >HSK 3.0: Từ áp lực trực tuyến đến thực lực trực diện</strong
+            >
           </p>
-          <p class="key-message reveal-up"><strong>KEY MESSAGE:</strong> Đừng để FOMO dẫn dắt, hãy để AOEC giúp bạn dẫn đầu.</p>
+          <p class="key-message reveal-up">
+            <strong>KEY MESSAGE:</strong> Đừng để FOMO dẫn dắt, hãy để AOEC giúp
+            bạn dẫn đầu.
+          </p>
           <blockquote class="key-message-quote reveal-up">
-            Thay vì để nỗi sợ khiến bạn học trong mù quáng, hãy để AOEC biến việc học thành lợi thế cạnh tranh bằng một tấm bằng thực chất.
+            Thay vì để nỗi sợ khiến bạn học trong mù quáng, hãy để AOEC biến
+            việc học thành lợi thế cạnh tranh bằng một tấm bằng thực chất.
           </blockquote>
           <div class="idea-strip">
             <span>LinkedIn Envy</span>
@@ -297,12 +751,63 @@
       <section id="content" class="slide">
         <div class="slide-inner">
           <p class="eyebrow">Content Engine</p>
-          <h2 class="section-title reveal-up">Nội dung được thiết kế như một đường ray chuyển đổi.</h2>
+          <h2 class="section-title reveal-up">
+            Nội dung được thiết kế như một đường ray chuyển đổi.
+          </h2>
           <div class="content-grid">
-            <article class="content-card reveal-card"><h3 class="content-card-title"><i data-lucide="clapperboard" class="lucide-inline" aria-hidden="true"></i> Reels/TikTok</h3><p>POV đi thi HSK, lỗi phát âm phổ biến, “một câu nói cứu buổi phỏng vấn”.</p></article>
-            <article class="content-card reveal-card"><h3 class="content-card-title"><i data-lucide="clipboard-list" class="lucide-inline" aria-hidden="true"></i> Quiz Lead Magnet</h3><p>Test 90 giây xác định lỗ hổng: nghe, đọc, khẩu ngữ, ngữ pháp.</p></article>
-            <article class="content-card reveal-card"><h3 class="content-card-title"><i data-lucide="mic-2" class="lucide-inline" aria-hidden="true"></i> Livestream Clinic</h3><p>Giảng viên sửa lỗi thật, MarTin làm mascot dẫn dắt thử thách.</p></article>
-            <article class="content-card reveal-card"><h3 class="content-card-title"><i data-lucide="school" class="lucide-inline" aria-hidden="true"></i> Offline Trial</h3><p>Buổi học nhỏ, có mini report sau lớp và voucher đăng ký nhanh.</p></article>
+            <article class="content-card reveal-card">
+              <h3 class="content-card-title">
+                <i
+                  data-lucide="clapperboard"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Reels/TikTok
+              </h3>
+              <p>
+                POV đi thi HSK, lỗi phát âm phổ biến, “một câu nói cứu buổi
+                phỏng vấn”.
+              </p>
+            </article>
+            <article class="content-card reveal-card">
+              <h3 class="content-card-title">
+                <i
+                  data-lucide="clipboard-list"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Quiz Lead Magnet
+              </h3>
+              <p>
+                Test 90 giây xác định lỗ hổng: nghe, đọc, khẩu ngữ, ngữ pháp.
+              </p>
+            </article>
+            <article class="content-card reveal-card">
+              <h3 class="content-card-title">
+                <i
+                  data-lucide="mic-2"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Livestream Clinic
+              </h3>
+              <p>
+                Giảng viên sửa lỗi thật, MarTin làm mascot dẫn dắt thử thách.
+              </p>
+            </article>
+            <article class="content-card reveal-card">
+              <h3 class="content-card-title">
+                <i
+                  data-lucide="school"
+                  class="lucide-inline"
+                  aria-hidden="true"
+                ></i>
+                Offline Trial
+              </h3>
+              <p>
+                Buổi học nhỏ, có mini report sau lớp và voucher đăng ký nhanh.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -311,14 +816,24 @@
         <div class="slide-inner kpi-layout">
           <div>
             <p class="eyebrow">Measurement</p>
-            <h2 class="section-title reveal-up">Mỗi giai đoạn có một chỉ số thắng riêng.</h2>
+            <h2 class="section-title reveal-up">
+              Mỗi giai đoạn có một chỉ số thắng riêng.
+            </h2>
           </div>
           <div class="bar-chart reveal-card">
-            <div><span>Awaken Reach</span><i style="--w:92%"></i><b>2M</b></div>
-            <div><span>Quiz Completion</span><i style="--w:72%"></i><b>45%</b></div>
-            <div><span>Lead Quality</span><i style="--w:80%"></i><b>8K</b></div>
-            <div><span>Trial Attendance</span><i style="--w:64%"></i><b>1.2K</b></div>
-            <div><span>Enrollment</span><i style="--w:86%"></i><b>3K</b></div>
+            <div>
+              <span>Awaken Reach</span><i style="--w: 92%"></i><b>2M</b>
+            </div>
+            <div>
+              <span>Quiz Completion</span><i style="--w: 72%"></i><b>45%</b>
+            </div>
+            <div>
+              <span>Lead Quality</span><i style="--w: 80%"></i><b>8K</b>
+            </div>
+            <div>
+              <span>Trial Attendance</span><i style="--w: 64%"></i><b>1.2K</b>
+            </div>
+            <div><span>Enrollment</span><i style="--w: 86%"></i><b>3K</b></div>
           </div>
         </div>
       </section>
@@ -326,31 +841,80 @@
       <section id="timeline" class="slide">
         <div class="slide-inner">
           <p class="eyebrow">Rollout Timeline</p>
-          <h2 class="section-title reveal-up">8 tuần đi từ tiếng vang đến doanh thu lớp học.</h2>
+          <h2 class="section-title reveal-up">
+            8 tuần đi từ tiếng vang đến doanh thu lớp học.
+          </h2>
           <div class="timeline">
-            <div class="timeline-node reveal-card"><b>W1-W2</b><span>Tease FOMO score, KOL seeding, landing quiz.</span></div>
-            <div class="timeline-node reveal-card"><b>W3-W5</b><span>Challenge 7 ngày, livestream clinic, retargeting.</span></div>
-            <div class="timeline-node reveal-card"><b>W6-W7</b><span>Offline open class, referral squad, counselor follow-up.</span></div>
-            <div class="timeline-node reveal-card"><b>W8</b><span>Showcase kết quả, chốt lớp, publish proof pack.</span></div>
+            <div class="timeline-node reveal-card">
+              <b>W1-W2</b
+              ><span>Tease FOMO score, KOL seeding, landing quiz.</span>
+            </div>
+            <div class="timeline-node reveal-card">
+              <b>W3-W5</b
+              ><span>Challenge 7 ngày, livestream clinic, retargeting.</span>
+            </div>
+            <div class="timeline-node reveal-card">
+              <b>W6-W7</b
+              ><span
+                >Offline open class, referral squad, counselor follow-up.</span
+              >
+            </div>
+            <div class="timeline-node reveal-card">
+              <b>W8</b
+              ><span>Showcase kết quả, chốt lớp, publish proof pack.</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="closing" class="slide closing-slide">
         <div class="slide-deco slide-deco--closing" aria-hidden="true">
-          <img src="/img/deco-stars.svg" alt="" class="deco-img deco-img--closing-stars" />
-          <img src="/img/deco-path.svg" alt="" class="deco-img deco-img--closing-path" />
+          <img
+            src="/img/deco-stars.svg"
+            alt=""
+            class="deco-img deco-img--closing-stars"
+          />
+          <img
+            src="/img/deco-path.svg"
+            alt=""
+            class="deco-img deco-img--closing-path"
+          />
         </div>
         <div class="forge-grid"></div>
-        <img class="martin closing-mascot" src="/assets/martin.png" alt="MarTin mascot" />
+        <img
+          class="martin closing-mascot"
+          src="/assets/martin.png"
+          alt="MarTin mascot"
+        />
         <div class="slide-inner closing-inner">
           <div class="closing-brand-row">
-            <img class="closing-brand-logo" src="/assets/easy-chinese-white.png" alt="Easy Chinese AOEC" width="260" height="90" decoding="async" />
+            <img
+              class="closing-brand-logo"
+              src="/assets/easy-chinese-white.png"
+              alt="Easy Chinese AOEC"
+              width="260"
+              height="90"
+              decoding="async"
+            />
           </div>
-          <p class="eyebrow eyebrow-with-icon"><i data-lucide="party-popper" class="lucide-eyebrow" aria-hidden="true"></i> The Close</p>
-          <h2 class="closing-title split-words">FOMO kéo họ dừng lại. PRO khiến họ đăng ký.</h2>
-          <p class="body-copy reveal-up">AOEC không bán một khóa học tiếng Trung. AOEC bán khoảnh khắc người học nhìn thấy năng lực thật của chính mình.</p>
-          <a class="print-button" href="/print" target="_blank" rel="noreferrer">Mở bản xuất PDF</a>
+          <p class="eyebrow eyebrow-with-icon">
+            <i
+              data-lucide="party-popper"
+              class="lucide-eyebrow"
+              aria-hidden="true"
+            ></i>
+            The Close
+          </p>
+          <h2 class="closing-title split-words">
+            FOMO kéo họ dừng lại. PRO khiến họ đăng ký.
+          </h2>
+          <p class="body-copy reveal-up">
+            AOEC không bán một khóa học tiếng Trung. AOEC bán khoảnh khắc người
+            học nhìn thấy năng lực thật của chính mình.
+          </p>
+          <a class="print-button" href="/print" target="_blank" rel="noreferrer"
+            >Mở bản xuất PDF</a
+          >
         </div>
       </section>
     </main>

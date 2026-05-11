@@ -350,6 +350,29 @@
       });
     });
 
+    if (!printMode) {
+      document.querySelectorAll(".phase-detail-slide").forEach((slide) => {
+        const wm = slide.querySelector(".phase-watermark");
+        if (wm) {
+          gsap.fromTo(
+            wm,
+            { x: 0, y: 0 },
+            {
+              x: "-4vw",
+              y: "5vh",
+              ease: "none",
+              scrollTrigger: {
+                trigger: slide,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.15,
+              },
+            },
+          );
+        }
+      });
+    }
+
     gsap.utils.toArray(".slide").forEach((section) => {
       gsap.fromTo(section, { "--glow": 0 }, {
         "--glow": 1,

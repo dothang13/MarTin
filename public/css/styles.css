@@ -231,10 +231,10 @@ body {
 
 .hero-brand-logo {
   display: block;
-  width: min(200px, 52%);
-  max-width: 280px;
+  width: min(300px, 68vw);
+  max-width: 400px;
   height: auto;
-  max-height: 52px;
+  max-height: min(96px, 18vw);
   margin: 0;
   object-fit: contain;
   object-position: left center;
@@ -642,6 +642,8 @@ body {
 }
 
 .phase-detail-inner {
+  position: relative;
+  z-index: 4;
   width: 100%;
 }
 
@@ -650,22 +652,17 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+  perspective: 1400px;
 }
 
 .phase-detail-block {
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 1.25rem;
   background: linear-gradient(145deg, rgba(28, 28, 28, 0.94), rgba(9, 9, 9, 0.92));
   padding: 1.25rem 1.2rem;
-}
-
-.phase-detail-block h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1rem;
-  font-weight: 900;
-  color: var(--blush);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .phase-detail-block ul {
@@ -678,6 +675,466 @@ body {
 
 .phase-detail-block li + li {
   margin-top: 0.45rem;
+}
+
+/* —— Phase detail slides (Awaken / Thunder / Glint) —— */
+.phase-detail-slide {
+  isolation: isolate;
+}
+
+.phase-detail-slide--awaken {
+  background:
+    radial-gradient(ellipse 90% 55% at 12% 22%, rgba(255, 186, 120, 0.14), transparent 52%),
+    radial-gradient(circle at 88% 78%, rgba(247, 131, 141, 0.12), transparent 45%),
+    linear-gradient(165deg, #070707 0%, #0e0c0a 48%, #121015 100%);
+}
+
+.phase-detail-slide--thunder {
+  background:
+    radial-gradient(ellipse 70% 60% at 75% 18%, rgba(56, 189, 248, 0.12), transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(168, 85, 247, 0.1), transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(247, 131, 141, 0.06), transparent 55%),
+    linear-gradient(195deg, #070707 0%, #0a0a12 55%, #0c0a14 100%);
+}
+
+.phase-detail-slide--glint {
+  background:
+    radial-gradient(ellipse 85% 50% at 50% 0%, rgba(251, 191, 36, 0.11), transparent 48%),
+    radial-gradient(circle at 20% 75%, rgba(247, 131, 141, 0.1), transparent 40%),
+    linear-gradient(175deg, #070707 0%, #100e0a 45%, #0a0908 100%);
+}
+
+.slide-deco--phase {
+  z-index: 1;
+}
+
+.slide-deco--phase .deco-img {
+  opacity: 0.42;
+}
+
+.phase-deco--awaken .deco-img--phase-awaken-stars {
+  width: min(240px, 46vw);
+  top: 8%;
+  right: 5%;
+  animation: deco-drift 16s ease-in-out infinite;
+}
+
+.phase-deco--awaken .deco-img--phase-awaken-path {
+  width: min(380px, 72vw);
+  left: -6%;
+  bottom: 6%;
+  opacity: 0.35;
+  animation: deco-drift 20s ease-in-out infinite reverse;
+}
+
+.phase-deco--thunder .deco-img--phase-thunder-burst {
+  width: min(260px, 50vw);
+  top: 6%;
+  right: 4%;
+  opacity: 0.5;
+  animation: phase-thunder-jolt 4.2s ease-in-out infinite;
+}
+
+.phase-deco--thunder .deco-img--phase-thunder-wave {
+  width: min(480px, 92vw);
+  left: -12%;
+  bottom: 0;
+  opacity: 0.32;
+  transform: rotate(-6deg);
+  animation: deco-drift 12s ease-in-out infinite;
+}
+
+.phase-deco--glint .deco-img--phase-glint-path {
+  width: min(360px, 68vw);
+  right: -5%;
+  bottom: 10%;
+  opacity: 0.38;
+  animation: deco-drift 18s ease-in-out infinite;
+}
+
+.phase-deco--glint .deco-img--phase-glint-spark {
+  width: min(200px, 38vw);
+  top: 12%;
+  left: 8%;
+  opacity: 0.4;
+  animation: phase-glint-twinkle 5s ease-in-out infinite;
+}
+
+@keyframes phase-thunder-jolt {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.48;
+  }
+  40% {
+    transform: translate(-4px, 3px) scale(1.03);
+    opacity: 0.58;
+  }
+  55% {
+    transform: translate(2px, -2px) scale(0.98);
+    opacity: 0.45;
+  }
+}
+
+@keyframes phase-glint-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.52;
+    transform: scale(1.04);
+  }
+}
+
+.phase-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.phase-ambient--awaken::before,
+.phase-ambient--awaken::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: phase-ambient-drift 14s ease-in-out infinite;
+}
+
+.phase-ambient--awaken::before {
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  top: -12%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(255, 200, 140, 0.35), transparent 68%);
+}
+
+.phase-ambient--awaken::after {
+  width: min(320px, 42vw);
+  height: min(320px, 42vw);
+  bottom: -5%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(247, 131, 141, 0.22), transparent 70%);
+  animation-delay: -7s;
+}
+
+.phase-ambient--thunder::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    conic-gradient(from 210deg at 70% 35%, transparent 0deg, rgba(56, 189, 248, 0.07) 38deg, transparent 70deg, rgba(168, 85, 247, 0.06) 120deg, transparent 200deg, rgba(247, 131, 141, 0.05) 280deg, transparent 360deg);
+  animation: phase-thunder-spin 28s linear infinite;
+  opacity: 0.9;
+}
+
+.phase-ambient--glint::before,
+.phase-ambient--glint::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  animation: phase-ambient-drift 12s ease-in-out infinite;
+}
+
+.phase-ambient--glint::before {
+  width: min(380px, 50vw);
+  height: min(380px, 50vw);
+  top: 5%;
+  right: -5%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.28), transparent 65%);
+}
+
+.phase-ambient--glint::after {
+  width: min(280px, 38vw);
+  height: min(280px, 38vw);
+  bottom: 20%;
+  left: -6%;
+  background: radial-gradient(circle, rgba(255, 152, 161, 0.2), transparent 68%);
+  animation-delay: -6s;
+}
+
+@keyframes phase-ambient-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(18px, -14px) scale(1.06);
+  }
+}
+
+@keyframes phase-thunder-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.phase-watermark {
+  position: absolute;
+  z-index: 1;
+  top: clamp(3.5rem, 10vh, 5.5rem);
+  right: min(4vw, 2.5rem);
+  font-size: clamp(4.5rem, 14vw, 10rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+.phase-detail-slide--thunder .phase-watermark {
+  color: rgba(56, 189, 248, 0.06);
+}
+
+.phase-detail-slide--glint .phase-watermark {
+  color: rgba(251, 191, 36, 0.07);
+}
+
+.phase-detail-header {
+  margin-bottom: 0.25rem;
+}
+
+.phase-detail-header .section-title {
+  margin-top: 0.85rem;
+}
+
+.phase-hero-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(125deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+.phase-detail-slide--thunder .phase-hero-strip {
+  border-color: rgba(56, 189, 248, 0.22);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.08), 0 18px 48px rgba(0, 0, 0, 0.4);
+}
+
+.phase-detail-slide--glint .phase-hero-strip {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.08), 0 18px 48px rgba(0, 0, 0, 0.38);
+}
+
+.phase-hero-num {
+  font-size: clamp(2.4rem, 5vw + 1rem, 3.6rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 152, 161, 0.95) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.phase-detail-slide--thunder .phase-hero-num {
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.phase-detail-slide--glint .phase-hero-num {
+  background: linear-gradient(135deg, #fffbeb 0%, #fbbf24 55%, #f7838d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.phase-hero-icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  background: rgba(247, 131, 141, 0.18);
+  border: 1px solid rgba(247, 131, 141, 0.45);
+  color: var(--blush);
+}
+
+.phase-detail-slide--thunder .phase-hero-icon {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #7dd3fc;
+}
+
+.phase-detail-slide--glint .phase-hero-icon {
+  background: rgba(251, 191, 36, 0.16);
+  border-color: rgba(251, 191, 36, 0.5);
+  color: #fde68a;
+}
+
+.phase-hero-icon svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  stroke-width: 2.25;
+}
+
+.phase-hero-meta {
+  flex: 1;
+  min-width: min(100%, 220px);
+}
+
+.phase-hero-meta .eyebrow {
+  margin: 0;
+}
+
+.phase-hero-tagline {
+  margin: 0.35rem 0 0;
+  font-size: clamp(0.78rem, 0.9vw + 0.3rem, 0.9rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.52);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.phase-hook-banner {
+  margin: 1.35rem 0 0;
+  padding: 0.95rem 1.15rem;
+  border-radius: 0.95rem;
+  font-size: clamp(1rem, 1.15vw + 0.45rem, 1.2rem);
+  font-weight: 800;
+  line-height: 1.45;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(100deg, rgba(247, 131, 141, 0.14), rgba(28, 28, 32, 0.75));
+}
+
+.phase-hook-banner--thunder {
+  border-color: rgba(56, 189, 248, 0.28);
+  background: linear-gradient(100deg, rgba(56, 189, 248, 0.12), rgba(20, 18, 32, 0.82));
+}
+
+.phase-hook-banner--glint {
+  border-color: rgba(251, 191, 36, 0.32);
+  background: linear-gradient(100deg, rgba(251, 191, 36, 0.14), rgba(28, 24, 18, 0.82));
+}
+
+.phase-hook-label {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.35rem;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  vertical-align: 0.15em;
+  color: #0a0a0a;
+  background: var(--blush);
+}
+
+.phase-hook-banner--thunder .phase-hook-label {
+  background: #7dd3fc;
+}
+
+.phase-hook-banner--glint .phase-hook-label {
+  background: #fbbf24;
+  color: #1a1408;
+}
+
+.phase-block-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.phase-block-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--blush);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.lucide-phase-block {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
+  stroke: currentColor;
+  color: var(--pink);
+}
+
+.phase-detail-slide--thunder .lucide-phase-block {
+  color: #38bdf8;
+}
+
+.phase-detail-slide--glint .lucide-phase-block {
+  color: #fbbf24;
+}
+
+.phase-detail-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 0% 0%, rgba(247, 131, 141, 0.12), transparent 55%);
+}
+
+.phase-detail-block:hover {
+  border-color: rgba(247, 131, 141, 0.45);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(247, 131, 141, 0.12);
+}
+
+.phase-detail-block:hover::after {
+  opacity: 1;
+}
+
+.phase-detail-slide--thunder .phase-detail-block:hover {
+  border-color: rgba(56, 189, 248, 0.42);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(56, 189, 248, 0.12);
+}
+
+.phase-detail-slide--thunder .phase-detail-block::after {
+  background: radial-gradient(120% 80% at 100% 0%, rgba(56, 189, 248, 0.14), transparent 55%);
+}
+
+.phase-detail-slide--glint .phase-detail-block:hover {
+  border-color: rgba(251, 191, 36, 0.42);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(251, 191, 36, 0.12);
+}
+
+.phase-detail-slide--glint .phase-detail-block::after {
+  background: radial-gradient(120% 80% at 50% 0%, rgba(251, 191, 36, 0.14), transparent 55%);
+}
+
+.phase-detail-block--accent {
+  border-color: rgba(247, 131, 141, 0.35);
+  background: linear-gradient(155deg, rgba(40, 28, 32, 0.95), rgba(12, 10, 11, 0.94));
+}
+
+.phase-detail-slide--thunder .phase-detail-block--accent {
+  border-color: rgba(56, 189, 248, 0.35);
+  background: linear-gradient(155deg, rgba(22, 28, 40, 0.95), rgba(10, 10, 14, 0.94));
+}
+
+.phase-detail-slide--glint .phase-detail-block--accent {
+  border-color: rgba(251, 191, 36, 0.32);
+  background: linear-gradient(155deg, rgba(36, 30, 18, 0.95), rgba(10, 9, 8, 0.94));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-deco--phase .deco-img,
+  .phase-ambient--awaken::before,
+  .phase-ambient--awaken::after,
+  .phase-ambient--thunder::before,
+  .phase-ambient--glint::before,
+  .phase-ambient--glint::after {
+    animation: none !important;
+  }
 }
 
 .phase-grid {
