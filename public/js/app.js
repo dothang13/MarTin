@@ -350,7 +350,7 @@
       });
     });
 
-    if (!printMode) {
+    if (!printMode && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       document.querySelectorAll(".phase-detail-slide").forEach((slide) => {
         const wm = slide.querySelector(".phase-watermark");
         if (wm) {
