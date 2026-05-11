@@ -1,0 +1,14 @@
+{
+  "name": "fomo-to-pro-presentation",
+  "version": "1.0.0",
+  "description": "AOEC FOMO to PRO vertical presentation web app",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
