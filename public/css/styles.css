@@ -285,6 +285,34 @@ body {
   width: 100%;
 }
 
+/* QR block under hero title */
+.hero-qr-wrap {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-qr-img {
+  width: min(140px, 18vw);
+  max-width: 160px;
+  height: auto;
+  display: block;
+  border-radius: 0.65rem;
+  padding: 0.45rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+
+.hero-qr-link a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: clamp(0.88rem, 1.2vw, 1rem);
+}
+
 .hero-proposal-title {
   margin: 0;
   font-size: clamp(2.75rem, 10vw + 1rem, 6.25rem);
